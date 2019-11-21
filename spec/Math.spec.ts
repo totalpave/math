@@ -42,7 +42,51 @@ describe('Math', () => {
         });
 
         it('floor', () => {
+            // is identical to native
             expect(TPMath.floor(123.456)).toBe(Math.floor(123.456));
+            expect(TPMath.floor(123.568)).toBe(Math.floor(123.568));
+            expect(TPMath.floor(-123.456)).toBe(Math.floor(-123.456));
+            expect(TPMath.floor(-123.568)).toBe(Math.floor(-123.568));
+
+            // positive numbers, positive precision
+            expect(TPMath.floor(5.54059)).toBe(5);
+            expect(TPMath.floor(5.54059, 0)).toBe(5);
+            expect(TPMath.floor(5.54059, 1)).toBe(5.5);
+            expect(TPMath.floor(5.54059, 2)).toBe(5.54);
+            expect(TPMath.floor(5.54059, 3)).toBe(5.54);
+            expect(TPMath.floor(5.54059, 4)).toBe(5.5405);
+            expect(TPMath.floor(5.54059, 5)).toBe(5.54059);
+            expect(TPMath.floor(5.54059, 6)).toBe(5.54059);
+            expect(TPMath.floor(10, 4)).toBe(10);
+            expect(TPMath.floor(0.0554059, 0)).toBe(0);
+            expect(TPMath.floor(0.0554059, 1)).toBe(0.0);
+            expect(TPMath.floor(0.0554059, 2)).toBe(0.05);
+
+            // positive numbers, negative precision
+            expect(TPMath.floor(554.059, -1)).toBe(550);
+            expect(TPMath.floor(554.059, -2)).toBe(500);
+            expect(TPMath.floor(554.059, -3)).toBe(0);
+            expect(TPMath.floor(554.059, -4)).toBe(0);
+
+            // negative numbers, positive precision
+            expect(TPMath.floor(-5.54059)).toBe(-6);
+            expect(TPMath.floor(-5.54059, 0)).toBe(-6);
+            expect(TPMath.floor(-5.54059, 1)).toBe(-5.6);
+            expect(TPMath.floor(-5.54059, 2)).toBe(-5.55);
+            expect(TPMath.floor(-5.54059, 3)).toBe(-5.541);
+            expect(TPMath.floor(-5.54059, 4)).toBe(-5.5406);
+            expect(TPMath.floor(-5.54059, 5)).toBe(-5.54059);
+            expect(TPMath.floor(-5.54059, 6)).toBe(-5.54059);
+            expect(TPMath.floor(-10, 4)).toBe(-10);
+            expect(TPMath.floor(-0.0554059, 0)).toBe(-1);
+            expect(TPMath.floor(-0.0554059, 1)).toBe(-0.1);
+            expect(TPMath.floor(-0.0554059, 2)).toBe(-0.06);
+
+            // negative numbers, negative precision
+            expect(TPMath.floor(-554.059, -1)).toBe(-560);
+            expect(TPMath.floor(-554.059, -2)).toBe(-600);
+            expect(TPMath.floor(-554.059, -3)).toBe(-1000);
+            expect(TPMath.floor(-564.059, -4)).toBe(-10000);
         });
 
         it('log', () => {
@@ -64,8 +108,51 @@ describe('Math', () => {
         });
 
         it('round', () => {
+            // is identical to native
             expect(TPMath.round(123.456)).toBe(Math.round(123.456));
             expect(TPMath.round(123.568)).toBe(Math.round(123.568));
+            expect(TPMath.round(-123.456)).toBe(Math.round(-123.456));
+            expect(TPMath.round(-123.568)).toBe(Math.round(-123.568));
+
+            // positive numbers, positive precision
+            expect(TPMath.round(5.54059)).toBe(6);
+            expect(TPMath.round(5.54059, 0)).toBe(6);
+            expect(TPMath.round(5.54059, 1)).toBe(5.5);
+            expect(TPMath.round(5.54059, 2)).toBe(5.54);
+            expect(TPMath.round(5.54059, 3)).toBe(5.541);
+            expect(TPMath.round(5.54059, 4)).toBe(5.5406);
+            expect(TPMath.round(5.54059, 5)).toBe(5.54059);
+            expect(TPMath.round(5.54059, 6)).toBe(5.54059);
+            expect(TPMath.round(10, 4)).toBe(10);
+            expect(TPMath.round(0.0554059, 0)).toBe(0);
+            expect(TPMath.round(0.0554059, 1)).toBe(0.1);
+            expect(TPMath.round(0.0554059, 2)).toBe(0.06);
+
+            // positive numbers, negative precision
+            expect(TPMath.round(554.059, -1)).toBe(550);
+            expect(TPMath.round(554.059, -2)).toBe(600);
+            expect(TPMath.round(554.059, -3)).toBe(1000);
+            expect(TPMath.round(554.059, -4)).toBe(0);
+
+            // negative numbers, positive precision
+            expect(TPMath.round(-5.54059)).toBe(-6);
+            expect(TPMath.round(-5.54059, 0)).toBe(-6);
+            expect(TPMath.round(-5.54059, 1)).toBe(-5.5);
+            expect(TPMath.round(-5.54059, 2)).toBe(-5.54);
+            expect(TPMath.round(-5.54059, 3)).toBe(-5.541);
+            expect(TPMath.round(-5.54059, 4)).toBe(-5.5406);
+            expect(TPMath.round(-5.54059, 5)).toBe(-5.54059);
+            expect(TPMath.round(-5.54059, 6)).toBe(-5.54059);
+            expect(TPMath.round(-10, 4)).toBe(-10);
+            expect(TPMath.round(-0.0554059, 0)).toBe(-0);
+            expect(TPMath.round(-0.0554059, 1)).toBe(-0.1);
+            expect(TPMath.round(-0.0554059, 2)).toBe(-0.06);
+
+            // negative numbers, negative precision
+            expect(TPMath.round(-554.059, -1)).toBe(-550);
+            expect(TPMath.round(-554.059, -2)).toBe(-600);
+            expect(TPMath.round(-554.059, -3)).toBe(-1000);
+            expect(TPMath.round(-564.059, -4)).toBe(0);
         });
 
         it('sin', () => {
