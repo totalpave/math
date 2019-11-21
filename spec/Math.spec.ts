@@ -1,4 +1,4 @@
-import * as api from '../src/api';
+
 import {Math as TPMath} from '../src/Math';
 
 function testFloorDataList(data: Array<any>) {
@@ -19,12 +19,6 @@ function testRoundDataList(data: Array<any>) {
 
 
 describe('Math', () => {
-    describe('Public API', () => {
-        it('Math', () => {
-            expect(api.Math).toBe(TPMath);
-        });
-    });
-
     describe('floor', () => {
         describe('positive numbers', () => {
             describe('positive precision', () => {
