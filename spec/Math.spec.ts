@@ -410,14 +410,6 @@ describe('Math', () => {
     });
 
     describe('Methods should produce the same output as native Math', () => {
-        it('floor', () => {
-            // is identical to native
-            expect(TPMath.floor(123.456)).toBe(Math.floor(123.456));
-            expect(TPMath.floor(123.568)).toBe(Math.floor(123.568));
-            expect(TPMath.floor(-123.456)).toBe(Math.floor(-123.456));
-            expect(TPMath.floor(-123.568)).toBe(Math.floor(-123.568));
-        });
-
         it('abs', () => {
             expect(TPMath.abs(-123)).toBe(Math.abs(-123));
         });
