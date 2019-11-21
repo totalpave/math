@@ -45,8 +45,9 @@ class TPMath implements Math {
         return native.exp(x);
     }
     
-    public floor(x: number): number {
-        return native.floor(x);
+    public floor(x: number, decimalPlaces: number = 0): number {
+        let precision = Math.pow(10, Math.floor(decimalPlaces));
+        return native.floor(x * precision) / precision;
     }
     
     public log(x: number): number {
@@ -69,8 +70,9 @@ class TPMath implements Math {
         return native.random();
     }
     
-    public round(x: number): number {
-        return native.round(x);
+    public round(x: number, decimalPlaces: number = 0): number {
+        let precision = Math.pow(10, Math.floor(decimalPlaces));
+        return native.round(x * precision) / precision;
     }
     
     public sin(x: number): number {
