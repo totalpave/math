@@ -1,6 +1,23 @@
 import * as api from '../src/api';
 import {Math as TPMath} from '../src/Math';
 
+function testFloorDataList(data: Array<any>) {
+    for (let i = 0, length = data.length; i < length; ++i) {
+        it(`value ${data[i].value}, precision ${data[i].precision}`, () => {
+            expect(TPMath.floor(data[i].value, data[i].precision)).toBe(data[i].result);
+        });
+    }
+}
+
+function testRoundDataList(data: Array<any>) {
+    for (let i = 0, length = data.length; i < length; ++i) {
+        it(`value ${data[i].value}, precision ${data[i].precision}`, () => {
+            expect(TPMath.round(data[i].value, data[i].precision)).toBe(data[i].result);
+        });
+    }
+}
+
+
 describe('Math', () => {
     describe('Public API', () => {
         it('Math', () => {
@@ -11,49 +28,191 @@ describe('Math', () => {
     describe('floor', () => {
         describe('positive numbers', () => {
             describe('positive precision', () => {
-                expect(TPMath.floor(5.54059)).toBe(5);
-                expect(TPMath.floor(5.54059, 0)).toBe(5);
-                expect(TPMath.floor(5.54059, 1)).toBe(5.5);
-                expect(TPMath.floor(5.54059, 2)).toBe(5.54);
-                expect(TPMath.floor(5.54059, 3)).toBe(5.54);
-                expect(TPMath.floor(5.54059, 4)).toBe(5.5405);
-                expect(TPMath.floor(5.54059, 5)).toBe(5.54059);
-                expect(TPMath.floor(5.54059, 6)).toBe(5.54059);
-                expect(TPMath.floor(10, 4)).toBe(10);
-                expect(TPMath.floor(0.0554059, 0)).toBe(0);
-                expect(TPMath.floor(0.0554059, 1)).toBe(0.0);
-                expect(TPMath.floor(0.0554059, 2)).toBe(0.05);
+                const NUM1 = 5.54059;
+                const NUM2 = 0.0554059;
+                testFloorDataList([
+                    {
+                        value: NUM1,
+                        precision: undefined, // Can't be null
+                        result: 5
+                    },
+                    {
+                        value: NUM1,
+                        precision: 0,
+                        result: 5
+                    },
+                    {
+                        value: NUM1,
+                        precision: 1,
+                        result: 5.5
+                    },
+                    {
+                        value: NUM1,
+                        precision: 2,
+                        result: 5.54
+                    },
+                    {
+                        value: NUM1,
+                        precision: 3,
+                        result: 5.54
+                    },
+                    {
+                        value: NUM1,
+                        precision: 4,
+                        result: 5.5405
+                    },
+                    {
+                        value: NUM1,
+                        precision: 5,
+                        result: 5.54059
+                    },
+                    {
+                        value: NUM1,
+                        precision: 6,
+                        result: 5.54059
+                    },
+                    {
+                        value: 10,
+                        precision: 4,
+                        result: 10
+                    },
+                    {
+                        value: NUM2,
+                        precision: 0,
+                        result: 0
+                    },
+                    {
+                        value: NUM2,
+                        precision: 1,
+                        result: 0.0
+                    },
+                    {
+                        value: NUM2,
+                        precision: 2,
+                        result: 0.05
+                    }
+                ]);
             });
 
             describe('negative precision', () => {
-                expect(TPMath.floor(554.059, -1)).toBe(550);
-                expect(TPMath.floor(554.059, -2)).toBe(500);
-                expect(TPMath.floor(554.059, -3)).toBe(0);
-                expect(TPMath.floor(554.059, -4)).toBe(0);
+                const NUM1 = 554.059;
+                testFloorDataList([
+                    {
+                        value: NUM1,
+                        precision: -1,
+                        result: 550
+                    },
+                    {
+                        value: NUM1,
+                        precision: -2,
+                        result: 500
+                    },
+                    {
+                        value: NUM1,
+                        precision: -3,
+                        result: 0
+                    },
+                    {
+                        value: NUM1,
+                        precision: -4,
+                        result: 0
+                    }
+                ]);
             });
         });
 
         describe('negative numbers', () => {
             describe('positive precision', () => {
-                expect(TPMath.floor(-5.54059)).toBe(-6);
-                expect(TPMath.floor(-5.54059, 0)).toBe(-6);
-                expect(TPMath.floor(-5.54059, 1)).toBe(-5.6);
-                expect(TPMath.floor(-5.54059, 2)).toBe(-5.55);
-                expect(TPMath.floor(-5.54059, 3)).toBe(-5.541);
-                expect(TPMath.floor(-5.54059, 4)).toBe(-5.5406);
-                expect(TPMath.floor(-5.54059, 5)).toBe(-5.54059);
-                expect(TPMath.floor(-5.54059, 6)).toBe(-5.54059);
-                expect(TPMath.floor(-10, 4)).toBe(-10);
-                expect(TPMath.floor(-0.0554059, 0)).toBe(-1);
-                expect(TPMath.floor(-0.0554059, 1)).toBe(-0.1);
-                expect(TPMath.floor(-0.0554059, 2)).toBe(-0.06);
+                const NUM1 = -5.54059;
+                const NUM2 = -0.0554059;
+                testFloorDataList([
+                    {
+                        value: NUM1,
+                        precision: undefined, // Can't be null
+                        result: -6
+                    },
+                    {
+                        value: NUM1,
+                        precision: 0,
+                        result: -6
+                    },
+                    {
+                        value: NUM1,
+                        precision: 1,
+                        result: -5.6
+                    },
+                    {
+                        value: NUM1,
+                        precision: 2,
+                        result: -5.55
+                    },
+                    {
+                        value: NUM1,
+                        precision: 3,
+                        result: -5.541
+                    },
+                    {
+                        value: NUM1,
+                        precision: 4,
+                        result: -5.5406
+                    },
+                    {
+                        value: NUM1,
+                        precision: 5,
+                        result: -5.54059
+                    },
+                    {
+                        value: NUM1,
+                        precision: 6,
+                        result: -5.54059
+                    },
+                    {
+                        value: -10,
+                        precision: 4,
+                        result: -10
+                    },
+                    {
+                        value: NUM2,
+                        precision: 0,
+                        result: -1
+                    },
+                    {
+                        value: NUM2,
+                        precision: 1,
+                        result: -0.1
+                    },
+                    {
+                        value: NUM2,
+                        precision: 2,
+                        result: -0.06
+                    }
+                ]);
             });
 
             describe('negative precision', () => {
-                expect(TPMath.floor(-554.059, -1)).toBe(-560);
-                expect(TPMath.floor(-554.059, -2)).toBe(-600);
-                expect(TPMath.floor(-554.059, -3)).toBe(-1000);
-                expect(TPMath.floor(-564.059, -4)).toBe(-10000);
+                const NUM1 = -554.059;
+                testFloorDataList([
+                    {
+                        value: NUM1,
+                        precision: -1,
+                        result: -560
+                    },
+                    {
+                        value: NUM1,
+                        precision: -2,
+                        result: -600
+                    },
+                    {
+                        value: NUM1,
+                        precision: -3,
+                        result: -1000
+                    },
+                    {
+                        value: NUM1,
+                        precision: -4,
+                        result: -10000
+                    }
+                ]);
             });
         });
     });
@@ -61,49 +220,191 @@ describe('Math', () => {
     describe('round', () => {
         describe('positive numbers', () => {
             describe('positive precision', () => {
-                expect(TPMath.round(5.54059)).toBe(6);
-                expect(TPMath.round(5.54059, 0)).toBe(6);
-                expect(TPMath.round(5.54059, 1)).toBe(5.5);
-                expect(TPMath.round(5.54059, 2)).toBe(5.54);
-                expect(TPMath.round(5.54059, 3)).toBe(5.541);
-                expect(TPMath.round(5.54059, 4)).toBe(5.5406);
-                expect(TPMath.round(5.54059, 5)).toBe(5.54059);
-                expect(TPMath.round(5.54059, 6)).toBe(5.54059);
-                expect(TPMath.round(10, 4)).toBe(10);
-                expect(TPMath.round(0.0554059, 0)).toBe(0);
-                expect(TPMath.round(0.0554059, 1)).toBe(0.1);
-                expect(TPMath.round(0.0554059, 2)).toBe(0.06);
+                const NUM1 = 5.54059;
+                const NUM2 = 0.0554059;
+                testRoundDataList([
+                    {
+                        value: NUM1,
+                        precision: undefined, // Can't be null
+                        result: 6
+                    },
+                    {
+                        value: NUM1,
+                        precision: 0,
+                        result: 6
+                    },
+                    {
+                        value: NUM1,
+                        precision: 1,
+                        result: 5.5
+                    },
+                    {
+                        value: NUM1,
+                        precision: 2,
+                        result: 5.54
+                    },
+                    {
+                        value: NUM1,
+                        precision: 3,
+                        result: 5.541
+                    },
+                    {
+                        value: NUM1,
+                        precision: 4,
+                        result: 5.5406
+                    },
+                    {
+                        value: NUM1,
+                        precision: 5,
+                        result: 5.54059
+                    },
+                    {
+                        value: NUM1,
+                        precision: 6,
+                        result: 5.54059
+                    },
+                    {
+                        value: 10,
+                        precision: 4,
+                        result: 10
+                    },
+                    {
+                        value: NUM2,
+                        precision: 0,
+                        result: 0
+                    },
+                    {
+                        value: NUM2,
+                        precision: 1,
+                        result: 0.1
+                    },
+                    {
+                        value: NUM2,
+                        precision: 2,
+                        result: 0.06
+                    }
+                ]);
             });
 
             describe('negative precision', () => {
-                expect(TPMath.round(554.059, -1)).toBe(550);
-                expect(TPMath.round(554.059, -2)).toBe(600);
-                expect(TPMath.round(554.059, -3)).toBe(1000);
-                expect(TPMath.round(554.059, -4)).toBe(0);
+                const NUM1 = 554.059;
+                testRoundDataList([
+                    {
+                        value: NUM1,
+                        precision: -1,
+                        result: 550
+                    },
+                    {
+                        value: NUM1,
+                        precision: -2,
+                        result: 600
+                    },
+                    {
+                        value: NUM1,
+                        precision: -3,
+                        result: 1000
+                    },
+                    {
+                        value: NUM1,
+                        precision: -4,
+                        result: 0
+                    }
+                ]);
             });
         });
 
         describe('negative numbers', () => {
             describe('positive precision', () => {
-                expect(TPMath.round(-5.54059)).toBe(-6);
-                expect(TPMath.round(-5.54059, 0)).toBe(-6);
-                expect(TPMath.round(-5.54059, 1)).toBe(-5.5);
-                expect(TPMath.round(-5.54059, 2)).toBe(-5.54);
-                expect(TPMath.round(-5.54059, 3)).toBe(-5.541);
-                expect(TPMath.round(-5.54059, 4)).toBe(-5.5406);
-                expect(TPMath.round(-5.54059, 5)).toBe(-5.54059);
-                expect(TPMath.round(-5.54059, 6)).toBe(-5.54059);
-                expect(TPMath.round(-10, 4)).toBe(-10);
-                expect(TPMath.round(-0.0554059, 0)).toBe(-0);
-                expect(TPMath.round(-0.0554059, 1)).toBe(-0.1);
-                expect(TPMath.round(-0.0554059, 2)).toBe(-0.06);
+                const NUM1 = -5.54059;
+                const NUM2 = -0.0554059;
+                testRoundDataList([
+                    {
+                        value: NUM1,
+                        precision: undefined, // Can't be null
+                        result: -6
+                    },
+                    {
+                        value: NUM1,
+                        precision: 0,
+                        result: -6
+                    },
+                    {
+                        value: NUM1,
+                        precision: 1,
+                        result: -5.5
+                    },
+                    {
+                        value: NUM1,
+                        precision: 2,
+                        result: -5.54
+                    },
+                    {
+                        value: NUM1,
+                        precision: 3,
+                        result: -5.541
+                    },
+                    {
+                        value: NUM1,
+                        precision: 4,
+                        result: -5.5406
+                    },
+                    {
+                        value: NUM1,
+                        precision: 5,
+                        result: -5.54059
+                    },
+                    {
+                        value: NUM1,
+                        precision: 6,
+                        result: -5.54059
+                    },
+                    {
+                        value: -10,
+                        precision: 4,
+                        result: -10
+                    },
+                    {
+                        value: NUM2,
+                        precision: 0,
+                        result: -0
+                    },
+                    {
+                        value: NUM2,
+                        precision: 1,
+                        result: -0.1
+                    },
+                    {
+                        value: NUM2,
+                        precision: 2,
+                        result: -0.06
+                    }
+                ]);
             });
 
             describe('negative precision', () => {
-                expect(TPMath.round(-554.059, -1)).toBe(-550);
-                expect(TPMath.round(-554.059, -2)).toBe(-600);
-                expect(TPMath.round(-554.059, -3)).toBe(-1000);
-                expect(TPMath.round(-564.059, -4)).toBe(0);
+                const NUM1 = -554.059;
+                testRoundDataList([
+                    {
+                        value: NUM1,
+                        precision: -1,
+                        result: -550
+                    },
+                    {
+                        value: NUM1,
+                        precision: -2,
+                        result: -600
+                    },
+                    {
+                        value: NUM1,
+                        precision: -3,
+                        result: -1000
+                    },
+                    {
+                        value: NUM1,
+                        precision: -4,
+                        result: 0
+                    }
+                ]);
             });
         });
     });
