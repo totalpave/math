@@ -19,5 +19,7 @@ module.exports = {
         "node": true,
         "jasmine": true
     },
-    "rules": {}
+    "rules": {
+        "no-console": "error"
+    }
 };
