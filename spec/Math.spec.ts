@@ -1,13 +1,7 @@
-import * as api from '../src/api';
+
 import {Math as TPMath} from '../src/Math';
 
 describe('Math', () => {
-    describe('Public API', () => {
-        it('Math', () => {
-            expect(api.Math).toBe(TPMath);
-        });
-    });
-
     describe('Methods should produce the same output as native Math', () => {
         it('abs', () => {
             expect(TPMath.abs(-123)).toBe(Math.abs(-123));
