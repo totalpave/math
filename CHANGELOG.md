@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.0.3-dev
+
 ## 0.0.2
 - [#3](https://github.com/totalpave/math/pull/3) - Added `getUnitText` API.
 - [#4](https://github.com/totalpave/math/pull/4) - Renamed `SIUnit` to `UnitMode` to avoid confusion.
