@@ -1,7 +1,7 @@
 
 import * as api from '../src/api';
 import {Math as TPMath} from '../src/Math';
-import {SIUnit} from '../src/SIUnit';
+import {UnitMode} from '../src/UnitMode';
 import {Unit} from '../src/Unit';
 import {UnitType} from '../src/UnitType';
 import {UnitUtils} from '../src/UnitUtils';
@@ -11,8 +11,8 @@ describe('Public API', () => {
         expect(api.Math).toBe(TPMath);
     });
 
-    it('SIUnit', () => {
-        expect(api.SIUnit).toBe(SIUnit);
+    it('UnitMode', () => {
+        expect(api.UnitMode).toBe(UnitMode);
     });
 
     it('Unit', () => {
