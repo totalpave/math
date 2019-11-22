@@ -6,8 +6,7 @@ sudo: false
 install:
   - npm install
 script:
-  - npm run-script lint
-  - npm run-script unit
   - npm run-script build
+  - npm test
 env:
   - NPM_TOKEN="travis"
