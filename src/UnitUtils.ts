@@ -7,6 +7,7 @@ import {
 } from './Unit';
 import { UnitType } from './UnitType';
 
+const SUPERSCRIPT_TWO: string = '\u00B2';
 const METER_FOOT: number = 0.3048;
 const METER_FOOT_SQUARED: number = 0.092903;
 const METER_MILE: number = 1609.34;
@@ -78,6 +79,46 @@ export class UnitUtils {
         }
 
         return type;
+    }
+
+    // Note: If Unit is not recognized, defaults to empty string.
+    public static getUnitText(unit: Unit): string {
+        switch (unit) {
+            case Unit.MILLIMETER:
+                return 'mm';
+            case Unit.CENTIMETER:
+                return 'cm';
+            case Unit.METER:
+                return 'm';
+            case Unit.KILOMETER:
+                return 'km';
+            case Unit.MILLIMETER_SQUARED:
+                return 'mm' + SUPERSCRIPT_TWO;
+            case Unit.CENTIMETER_SQUARED:
+                return 'cm' + SUPERSCRIPT_TWO;
+            case Unit.METER_SQUARED:
+                return 'm' + SUPERSCRIPT_TWO;
+            case Unit.KILOMETER_SQUARED:
+                return 'km' + SUPERSCRIPT_TWO;
+            case Unit.INCH:
+                return 'in';
+            case Unit.FOOT:
+                return 'ft';
+            case Unit.YARD:
+                return 'yd';
+            case Unit.MILE:
+                return 'mi';
+            case Unit.INCH_SQUARED:
+                return 'in' + SUPERSCRIPT_TWO;
+            case Unit.FOOT_SQUARED:
+                return 'ft' + SUPERSCRIPT_TWO;
+            case Unit.YARD_SQUARED:
+                return 'yd' + SUPERSCRIPT_TWO;
+            case Unit.MILE_SQUARED:
+                return 'mi' + SUPERSCRIPT_TWO;
+            default:
+                return '';
+        }
     }
 
     private static _fromMeterOverKilometer(value: number, to: Unit): number {

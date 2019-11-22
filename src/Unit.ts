@@ -1,4 +1,5 @@
 
+// NOTE: If you add/remove units from here, please update UnitUtils.getUnitText.
 export enum Unit {
     // METRIC
     MILLIMETER              = 1,
@@ -12,7 +13,6 @@ export enum Unit {
     KILOMETER_SQUARED       = Unit.METER_SQUARED << 1,
 
     // Imperial
-
     INCH                    = Unit.KILOMETER_SQUARED << 1,
     FOOT                    = Unit.INCH << 1,
     YARD                    = Unit.FOOT << 1,
