@@ -1,6 +1,7 @@
 # Changelog
 
 ## 0.0.3-dev
+- Removed `src` from `.npmignore` for source map support.
 
 ## 0.0.2
 - [#3](https://github.com/totalpave/math/pull/3) - Added `getUnitText` API.
