@@ -1,6 +1,8 @@
 # Changelog
 
-## 0.0.3-dev
+## 0.0.4-dev
+
+## 0.0.3 (January 13, 2020)
 - Removed `src` from `.npmignore` for source map support.
 
 ## 0.0.2
