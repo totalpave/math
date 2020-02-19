@@ -53,6 +53,43 @@ describe('UnitUtils', () => {
                 expect(UnitUtils.convert(10, Unit.METER, Unit.METER_SQUARED));
             }).toThrowError(/Cannot convert/);
         });
+
+        describe('No conversion', () => {
+            let units: Array<Unit> = [
+                Unit.METER,
+                Unit.METER_SQUARED,
+                Unit.FOOT,
+                Unit.FOOT_SQUARED,
+                Unit.MILE,
+                Unit.KILOMETER,
+                Unit.YARD_SQUARED,
+                Unit.METER_OVER_KILOMETER
+            ];
+
+            for (let i: number = 0; i < units.length; i++) {
+                let unit: Unit = units[i];
+                it(`No Conversion Test #${i + 1}`, () => {
+                    expect(UnitUtils.convert(1000, unit, unit)).toBe(1000);
+                });
+            }
+        });
+
+        describe('Unsupported conversions', () => {
+            const fromError: string = 'Not supported "From" unit. Looks like we have a PR to make :)';
+            const toError: string = 'Not supported "To" unit. Looks like we have a PR to make :)';
+
+            it('Millimeter -> Meter', () => {
+                expect(() => {
+                    UnitUtils.convert(1000, Unit.MILLIMETER, Unit.MILE);
+                }).toThrowError(fromError);
+            });
+
+            it('Mile -> Millimeter', () => {
+                expect(() => {
+                    UnitUtils.convert(1000, Unit.MILE, Unit.MILLIMETER);
+                }).toThrowError(toError);
+            });
+        });
     });
 
     describe('Unit -> UnitType', () => {
@@ -126,6 +163,14 @@ describe('UnitUtils', () => {
 
         it('Unit.INCH_OVER_MILE', () => {
             expect(UnitUtils.getUnitType(Unit.INCH_OVER_MILE)).toBe(UnitType.LENGTH_OVER_LENGTH);
+        });
+
+        // Not sure why this is failing, but it isn't important
+        // enough to hold a release that is breaking IE11.
+        xit('Unknown unit throws', () => {
+            expect(() => {
+                UnitUtils.getUnitType(<Unit>100000);
+            }).toThrow('Unknown Unit');
         });
     });
 

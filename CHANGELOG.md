@@ -1,6 +1,7 @@
 # Changelog
 
-## 0.0.4-dev
+## 0.0.4
+- Changed target to es3 to support IE11.
 
 ## 0.0.3 (January 13, 2020)
 - Removed `src` from `.npmignore` for source map support.

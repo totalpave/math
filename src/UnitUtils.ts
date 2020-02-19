@@ -78,6 +78,9 @@ export class UnitUtils {
             throw new Error('Unknown unit');
         }
 
+        // eslint-disable-next-line no-console
+        console.log('TYPE', type, unit, AREA, !!(unit & AREA));
+
         return type;
     }
 
