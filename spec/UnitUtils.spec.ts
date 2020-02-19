@@ -165,12 +165,10 @@ describe('UnitUtils', () => {
             expect(UnitUtils.getUnitType(Unit.INCH_OVER_MILE)).toBe(UnitType.LENGTH_OVER_LENGTH);
         });
 
-        // Not sure why this is failing, but it isn't important
-        // enough to hold a release that is breaking IE11.
-        xit('Unknown unit throws', () => {
+        it('Unknown unit throws', () => {
             expect(() => {
-                UnitUtils.getUnitType(<Unit>100000);
-            }).toThrow('Unknown Unit');
+                UnitUtils.getUnitType(<Unit>Infinity);
+            }).toThrowError(/Unknown unit/);
         });
     });
 
