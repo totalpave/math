@@ -233,7 +233,7 @@ class TPMath implements Math {
     }
 
     /**
-     * Returns a standard deviation
+     * Returns a sample standard deviation
      * @param data 
      */
     public sd(data: Array<number>): number {
@@ -247,8 +247,9 @@ class TPMath implements Math {
             variance += Math.pow(v - mean, 2);
         });
         variance /= n - 1;
-        let s: number = Math.sqrt(variance);
-        return s / Math.sqrt(n);
+        return Math.sqrt(variance);
+        // let s: number = Math.sqrt(variance);
+        // return s / Math.sqrt(n);
     }
 }
 
