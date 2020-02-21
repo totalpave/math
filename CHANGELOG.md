@@ -1,7 +1,8 @@
 # Changelog
 
-## 0.0.5-dev
+## 0.1.0
 - Unknown unit throws unit test fix
+- Standard Deviation
 
 ## 0.0.4
 - Changed target to es3 to support IE11.

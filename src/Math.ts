@@ -231,6 +231,25 @@ class TPMath implements Math {
     public cbrt(x: number): number {
         return native.cbrt(x);
     }
+
+    /**
+     * Returns a standard deviation
+     * @param data 
+     */
+    public sd(data: Array<number>): number {
+        let n: number = data.length;
+        let sum: number = data.reduce((p: number, c: number) => {
+            return p + c;
+        }, 0);
+        let mean: number = sum / n;
+        let variance: number = 0;
+        data.forEach((v: number) => {
+            variance += Math.pow(v - mean, 2);
+        });
+        variance /= n - 1;
+        let s: number = Math.sqrt(variance);
+        return s / Math.sqrt(n);
+    }
 }
 
 const math: TPMath = new TPMath();

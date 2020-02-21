@@ -558,5 +558,35 @@ describe('Math', () => {
         it('cbrt', () => {
             expect(TPMath.cbrt(123)).toBe(Math.cbrt(123));
         });
+
+        describe('standard deviation', () => {
+            it('Test #001', () => {
+                expect(TPMath.sd([
+                    10,
+                    12,
+                    23,
+                    23,
+                    16,
+                    23,
+                    21,
+                    16
+                ])).toBe(1.8516401995451026);
+            });
+
+            it('Test #002', () => {
+                expect(TPMath.sd([
+                    38,
+                    44,
+                    57,
+                    21,
+                    53,
+                    57,
+                    28,
+                    28,
+                    35,
+                    28
+                ])).toBe(4.180510335672747);
+            });
+        });
     });
 });
