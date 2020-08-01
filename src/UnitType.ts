@@ -3,5 +3,6 @@ export enum UnitType {
     LINEAR,
     AREA,
     LENGTH_OVER_LENGTH,
-    COUNT
+    COUNT,
+    ANGLE
 }

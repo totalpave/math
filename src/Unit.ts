@@ -24,7 +24,10 @@ export enum Unit {
     MILE_SQUARED            = Unit.YARD_SQUARED << 1,
 
     METER_OVER_KILOMETER    = Unit.MILE_SQUARED << 1,
-    INCH_OVER_MILE          = Unit.METER_OVER_KILOMETER << 1
+    INCH_OVER_MILE          = Unit.METER_OVER_KILOMETER << 1,
+
+    DEGREE                  = Unit.INCH_OVER_MILE << 1,
+    RADIAN                  = Unit.DEGREE << 1
 }
 
 export const LINEAR: number = (
@@ -50,3 +53,5 @@ export const AREA: number = (
 );
 
 export const LENGTH_OVER_LENGTH: number = Unit.METER_OVER_KILOMETER | Unit.INCH_OVER_MILE;
+
+export const ANGLE: number = Unit.DEGREE | Unit.RADIAN;

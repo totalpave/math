@@ -2,14 +2,15 @@
 let native: Math = Math;
 
 class TPMath implements Math {
-    public E: number         = native.E;
-    public LN10: number      = native.LN10;
-    public LN2: number       = native.LN2;
-    public LOG2E: number     = native.LOG2E;
-    public LOG10E: number    = native.LOG10E;
-    public PI: number        = native.PI;
-    public SQRT1_2: number   = native.SQRT1_2;
-    public SQRT2: number     = native.SQRT2;
+    public E: number                = native.E;
+    public LN10: number             = native.LN10;
+    public LN2: number              = native.LN2;
+    public LOG2E: number            = native.LOG2E;
+    public LOG10E: number           = native.LOG10E;
+    public PI: number               = native.PI;
+    public SQRT1_2: number          = native.SQRT1_2;
+    public SQRT2: number            = native.SQRT2;
+    public EARTH_RADIUS: number     = 6371008.8;
     
     [Symbol.toStringTag]: string;
 
@@ -236,7 +237,7 @@ class TPMath implements Math {
      * Returns a sample standard deviation
      * @param data 
      */
-    public sd(data: Array<number>): number {
+    public sd(data: Array<number>, population?: boolean): number {
         let n: number = data.length;
         let sum: number = data.reduce((p: number, c: number) => {
             return p + c;
@@ -246,7 +247,7 @@ class TPMath implements Math {
         data.forEach((v: number) => {
             variance += Math.pow(v - mean, 2);
         });
-        variance /= n - 1;
+        variance /= n - (population ? 0 : 1);
         return Math.sqrt(variance);
         // let s: number = Math.sqrt(variance);
         // return s / Math.sqrt(n);

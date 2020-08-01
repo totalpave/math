@@ -3,8 +3,10 @@ import {
     Unit,
     LINEAR,
     AREA,
-    LENGTH_OVER_LENGTH
+    LENGTH_OVER_LENGTH,
+    ANGLE
 } from './Unit';
+import Math from './Math';
 import { UnitType } from './UnitType';
 
 const SUPERSCRIPT_TWO: string = '\u00B2';
@@ -22,9 +24,9 @@ export class UnitUtils {
     public static convert(value: number, from: Unit, to: Unit): number {
         let result: number = null;
 
-        if (UnitUtils.getUnitType(from) !== UnitUtils.getUnitType(to)) {
-            throw new Error('Cannot convert two different unit types.');
-        }
+        // if (UnitUtils.getUnitType(from) !== UnitUtils.getUnitType(to)) {
+        //     throw new Error('Cannot convert two different unit types.');
+        // }
 
         if (value !== null && from !== to) {
             switch (from) {
@@ -52,6 +54,12 @@ export class UnitUtils {
                 case Unit.METER_OVER_KILOMETER:
                     result = UnitUtils._fromMeterOverKilometer(value, to);
                     break;
+                case Unit.RADIAN:
+                    result = UnitUtils._fromRadian(value, to);
+                    break;
+                case Unit.DEGREE:
+                    result = UnitUtils._fromDegree(value, to);
+                    break;
                 default: this._throwNotSupportedFromUnit();
             }
         }
@@ -73,6 +81,9 @@ export class UnitUtils {
         }
         else if (!!(unit & LENGTH_OVER_LENGTH)) {
             type = UnitType.LENGTH_OVER_LENGTH;
+        }
+        else if (!!(unit & ANGLE)) {
+            type = UnitType.ANGLE;
         }
         else {
             throw new Error('Unknown unit');
@@ -116,9 +127,60 @@ export class UnitUtils {
                 return 'yd' + SUPERSCRIPT_TWO;
             case Unit.MILE_SQUARED:
                 return 'mi' + SUPERSCRIPT_TWO;
+            case Unit.RADIAN:
+                return 'rad';
+            case Unit.DEGREE:
+                return '\u00b0';
             default:
                 return '';
         }
+    }
+
+    private static _fromRadian(value: number, to: Unit): number {
+        let result: number = null;
+
+        switch (to) {
+            case Unit.DEGREE:
+                result = (value % (2 * Math.PI)) * 180 / Math.PI;
+                break;
+            case Unit.CENTIMETER:
+                result = value * UnitUtils.convert(Math.EARTH_RADIUS, Unit.METER, Unit.CENTIMETER);
+                break;
+            case Unit.FOOT:
+                result = value * UnitUtils.convert(Math.EARTH_RADIUS, Unit.METER, Unit.FOOT);
+                break;
+            case Unit.INCH:
+                result = value * UnitUtils.convert(Math.EARTH_RADIUS, Unit.METER, Unit.INCH);
+                break;
+            case Unit.KILOMETER:
+                result = value * UnitUtils.convert(Math.EARTH_RADIUS, Unit.METER, Unit.KILOMETER);
+                break;
+            case Unit.METER:
+                result = value * Math.EARTH_RADIUS;
+                break;
+            case Unit.MILLIMETER:
+                result = value * UnitUtils.convert(Math.EARTH_RADIUS, Unit.METER, Unit.MILLIMETER);
+                break;
+            case Unit.YARD:
+                result = value * UnitUtils.convert(Math.EARTH_RADIUS, Unit.METER, Unit.YARD);
+                break;
+            default: this._throwNotSupportedToUnit();
+        }
+
+        return result;
+    }
+
+    private static _fromDegree(value: number, to: Unit): number {
+        let result: number = null;
+
+        switch (to) {
+            case Unit.RADIAN:
+                result = (value % 360) * Math.PI / 180;
+                break;
+            default: this._throwNotSupportedToUnit();
+        }
+
+        return result;
     }
 
     private static _fromMeterOverKilometer(value: number, to: Unit): number {

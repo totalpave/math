@@ -48,10 +48,18 @@ describe('UnitUtils', () => {
             expect(UnitUtils.convert(10, Unit.FOOT_SQUARED, Unit.METER_SQUARED)).toBe(0.92903);
         });
 
+        it('Radian -> Degree', () => {
+            expect(UnitUtils.convert(1, Unit.RADIAN, Unit.DEGREE)).toBe(57.29577951308232);
+        });
+
+        it('Degree -> Radian', () => {
+            expect(UnitUtils.convert(57.29577951308232, Unit.DEGREE, Unit.RADIAN)).toBe(1);
+        });
+
         it('Should throw on unit type mismatch', () => {
             expect(() => {
                 expect(UnitUtils.convert(10, Unit.METER, Unit.METER_SQUARED));
-            }).toThrowError(/Cannot convert/);
+            }).toThrowError(/Not supported/);
         });
 
         describe('No conversion', () => {
@@ -63,7 +71,9 @@ describe('UnitUtils', () => {
                 Unit.MILE,
                 Unit.KILOMETER,
                 Unit.YARD_SQUARED,
-                Unit.METER_OVER_KILOMETER
+                Unit.METER_OVER_KILOMETER,
+                Unit.DEGREE,
+                Unit.RADIAN
             ];
 
             for (let i: number = 0; i < units.length; i++) {
@@ -165,6 +175,14 @@ describe('UnitUtils', () => {
             expect(UnitUtils.getUnitType(Unit.INCH_OVER_MILE)).toBe(UnitType.LENGTH_OVER_LENGTH);
         });
 
+        it('Unit.RADIAN', () => {
+            expect(UnitUtils.getUnitType(Unit.RADIAN)).toBe(UnitType.ANGLE);
+        });
+
+        it('Unit.DEGREE', () => {
+            expect(UnitUtils.getUnitType(Unit.DEGREE)).toBe(UnitType.ANGLE);
+        });
+
         it('Unknown unit throws', () => {
             expect(() => {
                 UnitUtils.getUnitType(<Unit>Infinity);
@@ -227,6 +245,12 @@ describe('UnitUtils', () => {
         });
         it('Unit.INCH_OVER_MILE', () => {
             expect(UnitUtils.getUnitText(Unit.INCH_OVER_MILE)).toBe('');
+        });
+        it('Unit.RADIAN', () => {
+            expect(UnitUtils.getUnitText(Unit.RADIAN)).toBe('rad');
+        });
+        it('Unit.DEGREE', () => {
+            expect(UnitUtils.getUnitText(Unit.DEGREE)).toBe('\u00b0');
         });
     });
 });

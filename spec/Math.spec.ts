@@ -17,7 +17,6 @@ function testRoundDataList(data: Array<any>) {
     }
 }
 
-
 describe('Math', () => {
     describe('floor', () => {
         describe('positive numbers', () => {
@@ -558,35 +557,48 @@ describe('Math', () => {
         it('cbrt', () => {
             expect(TPMath.cbrt(123)).toBe(Math.cbrt(123));
         });
+    });
 
-        describe('standard deviation', () => {
-            it('Test #001', () => {
-                expect(TPMath.sd([
-                    10,
-                    12,
-                    23,
-                    23,
-                    16,
-                    23,
-                    21,
-                    16
-                ])).toBe(1.8516401995451026);
-            });
+    describe('standard deviation', () => {
+        it('Test #001', () => {
+            expect(TPMath.sd([
+                10,
+                12,
+                23,
+                23,
+                16,
+                23,
+                21,
+                16
+            ])).toBe(5.237229365663817);
+        });
 
-            it('Test #002', () => {
-                expect(TPMath.sd([
-                    38,
-                    44,
-                    57,
-                    21,
-                    53,
-                    57,
-                    28,
-                    28,
-                    35,
-                    28
-                ])).toBe(4.180510335672747);
-            });
+        it('Test #002', () => {
+            expect(TPMath.sd([
+                38,
+                44,
+                57,
+                21,
+                53,
+                57,
+                28,
+                28,
+                35,
+                28
+            ])).toBe(13.219934442600943);
+        });
+
+        it('Test #003', () => {
+            expect(TPMath.sd([
+                63,
+                71,
+                80,
+                75,
+                57,
+                79,
+                83,
+                41
+            ], true)).toBe(13.32232618576801);
         });
     });
 });
