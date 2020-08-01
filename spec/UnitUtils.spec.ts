@@ -85,8 +85,8 @@ describe('UnitUtils', () => {
         });
 
         describe('Unsupported conversions', () => {
-            const fromError: string = 'Not supported "From" unit. Looks like we have a PR to make :)';
-            const toError: string = 'Not supported "To" unit. Looks like we have a PR to make :)';
+            let fromError: string = 'Not supported "From" unit. Looks like we have a PR to make :)';
+            let toError: string = 'Not supported "To" unit. Looks like we have a PR to make :)';
 
             it('Millimeter -> Meter', () => {
                 expect(() => {

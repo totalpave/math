@@ -254,7 +254,7 @@ class TPMath implements Math {
     }
 }
 
-const math: TPMath = new TPMath();
+let math: TPMath = new TPMath();
 
 export {math as Math};
 export default math;
