@@ -13,8 +13,13 @@ const SUPERSCRIPT_TWO: string = '\u00B2';
 const METER_FOOT: number = 0.3048;
 const METER_FOOT_SQUARED: number = 0.092903;
 const METER_MILE: number = 1609.34;
+const METER_NAUTICAL_MILE: number = 1852;
 const METER_KILOMETER: number = 1000;
 const METER_YARD_SQUARED: number = 0.836127;
+const METER_CENTIMETER: number = 100;
+const METER_MILLIMETER: number = 1000;
+const METER_INCH: number = 39.3701;
+const METER_YARD: number = 1.09361;
 
 const METER_OVER_KILOMETER_INCH_OVER_MILE: number = 63.36005;
 
@@ -119,6 +124,10 @@ export class UnitUtils {
                 return 'yd';
             case Unit.MILE:
                 return 'mi';
+            case Unit.NAUTICAL_MILE:
+                return 'nmi';
+            case Unit.NAUTICAL_MILE_SQUARED:
+                return 'nmi' + SUPERSCRIPT_TWO;
             case Unit.INCH_SQUARED:
                 return 'in' + SUPERSCRIPT_TWO;
             case Unit.FOOT_SQUARED:
@@ -163,6 +172,12 @@ export class UnitUtils {
                 break;
             case Unit.YARD:
                 result = value * UnitUtils.convert(Math.EARTH_RADIUS, Unit.METER, Unit.YARD);
+                break;
+            case Unit.MILE:
+                result = value * UnitUtils.convert(Math.EARTH_RADIUS, Unit.METER, Unit.MILE);
+                break;
+            case Unit.NAUTICAL_MILE:
+                result = value * UnitUtils.convert(Math.EARTH_RADIUS, Unit.METER, Unit.NAUTICAL_MILE);
                 break;
             default: this._throwNotSupportedToUnit();
         }
@@ -231,6 +246,24 @@ export class UnitUtils {
                 break;
             case Unit.MILE:
                 result = value / METER_MILE;
+                break;
+            case Unit.NAUTICAL_MILE:
+                result = value / METER_NAUTICAL_MILE;
+                break;
+            case Unit.MILLIMETER:
+                result = value * METER_MILLIMETER;
+                break;
+            case Unit.CENTIMETER:
+                result = value * METER_CENTIMETER;
+                break;
+            case Unit.KILOMETER:
+                result = value / METER_KILOMETER;
+                break;
+            case Unit.INCH:
+                result = value * METER_INCH;
+                break;
+            case Unit.YARD:
+                result = value * METER_YARD;
                 break;
             default: this._throwNotSupportedToUnit();
         }

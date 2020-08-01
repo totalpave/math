@@ -17,13 +17,15 @@ export enum Unit {
     FOOT                    = Unit.INCH << 1,
     YARD                    = Unit.FOOT << 1,
     MILE                    = Unit.YARD << 1,
+    NAUTICAL_MILE           = Unit.MILE << 1,
 
-    INCH_SQUARED            = Unit.MILE << 1,
+    INCH_SQUARED            = Unit.NAUTICAL_MILE << 1,
     FOOT_SQUARED            = Unit.INCH_SQUARED << 1,
     YARD_SQUARED            = Unit.FOOT_SQUARED << 1,
     MILE_SQUARED            = Unit.YARD_SQUARED << 1,
+    NAUTICAL_MILE_SQUARED   = Unit.MILE_SQUARED << 1,
 
-    METER_OVER_KILOMETER    = Unit.MILE_SQUARED << 1,
+    METER_OVER_KILOMETER    = Unit.NAUTICAL_MILE_SQUARED << 1,
     INCH_OVER_MILE          = Unit.METER_OVER_KILOMETER << 1,
 
     DEGREE                  = Unit.INCH_OVER_MILE << 1,
@@ -38,7 +40,8 @@ export const LINEAR: number = (
     Unit.INCH |
     Unit.FOOT |
     Unit.YARD |
-    Unit.MILE
+    Unit.MILE |
+    Unit.NAUTICAL_MILE
 );
 
 export const AREA: number = (

@@ -16,88 +16,294 @@ describe('UnitUtils', () => {
          *          ...
          */
 
-        it('Meter -> Foot', () => {
-            expect(UnitUtils.convert(10, Unit.METER, Unit.FOOT)).toBe(32.808398950131235);
-        });
+        describe('From Meter', () => {
 
-        it('Meter Squared -> Foot Squared', () => {
-            expect(UnitUtils.convert(10, Unit.METER_SQUARED, Unit.FOOT_SQUARED)).toBe(107.63915051182416);
-        });
+            it('To Millimeter', () => {
+                expect(UnitUtils.convert(1, Unit.METER, Unit.MILLIMETER)).toBe(1000);
+            });
 
-        it('Meter/Kilometer -> Inch/Mile', () => {
-            expect(UnitUtils.convert(10, Unit.METER_OVER_KILOMETER, Unit.INCH_OVER_MILE)).toBe(633.6005);
-        });
+            it('To Centimeter', () => {
+                expect(UnitUtils.convert(1, Unit.METER, Unit.CENTIMETER)).toBe(100);
+            });
 
-        it('Feet -> Meter', () => {
-            expect(UnitUtils.convert(10, Unit.FOOT, Unit.METER))
-        });
+            it('To Meter', () => {
+                expect(UnitUtils.convert(1, Unit.METER, Unit.METER)).toBe(1);
+            });
 
-        it('Mile -> Meter', () => {
-            expect(UnitUtils.convert(10, Unit.MILE, Unit.METER)).toBe(16093.4);
-        });
+            it('To Kilometer', () => {
+                expect(UnitUtils.convert(1, Unit.METER, Unit.KILOMETER)).toBe(0.001);
+            });
 
-        it('Kilometer -> Meter', () => {
-            expect(UnitUtils.convert(10, Unit.KILOMETER, Unit.METER)).toBe(10000);
-        });
+            it('To Inch', () => {
+                expect(UnitUtils.convert(1, Unit.METER, Unit.INCH)).toBe(39.3701);
+            });
 
-        it('Yard Squared -> Meter Squared', () => {
-            expect(UnitUtils.convert(10, Unit.YARD_SQUARED, Unit.METER_SQUARED)).toBe(8.36127);
-        });
+            it('To Foot', () => {
+                expect(UnitUtils.convert(1, Unit.METER, Unit.FOOT)).toBe(3.280839895013123);
+            });
 
-        it('Foot Squared -> Meter Squared', () => {
-            expect(UnitUtils.convert(10, Unit.FOOT_SQUARED, Unit.METER_SQUARED)).toBe(0.92903);
-        });
+            it('To Yard', () => {
+                expect(UnitUtils.convert(1, Unit.METER, Unit.YARD)).toBe(1.09361);
+            });
 
-        it('Radian -> Degree', () => {
-            expect(UnitUtils.convert(1, Unit.RADIAN, Unit.DEGREE)).toBe(57.29577951308232);
-        });
+            it('To Mile', () => {
+                expect(UnitUtils.convert(1, Unit.METER, Unit.MILE)).toBe(0.0006213727366498068);
+            });
 
-        it('Degree -> Radian', () => {
-            expect(UnitUtils.convert(57.29577951308232, Unit.DEGREE, Unit.RADIAN)).toBe(1);
-        });
+            it('To Nautical Mile', () => {
+                expect(UnitUtils.convert(1, Unit.METER, Unit.NAUTICAL_MILE)).toBe(0.0005399568034557236);
+            });
 
-        it('Should throw on unit type mismatch', () => {
-            expect(() => {
-                expect(UnitUtils.convert(10, Unit.METER, Unit.METER_SQUARED));
-            }).toThrowError(/Not supported/);
-        });
-
-        describe('No conversion', () => {
-            let units: Array<Unit> = [
-                Unit.METER,
-                Unit.METER_SQUARED,
-                Unit.FOOT,
+            let notSupported: Array<Unit> = [
+                Unit.INCH_SQUARED,
                 Unit.FOOT_SQUARED,
-                Unit.MILE,
-                Unit.KILOMETER,
                 Unit.YARD_SQUARED,
+                Unit.MILE_SQUARED,
+                Unit.NAUTICAL_MILE_SQUARED,
+                Unit.MILLIMETER_SQUARED,
+                Unit.CENTIMETER_SQUARED,
+                Unit.METER_SQUARED,
+                Unit.KILOMETER_SQUARED,
                 Unit.METER_OVER_KILOMETER,
+                Unit.INCH_OVER_MILE,
                 Unit.DEGREE,
                 Unit.RADIAN
             ];
 
-            for (let i: number = 0; i < units.length; i++) {
-                let unit: Unit = units[i];
-                it(`No Conversion Test #${i + 1}`, () => {
-                    expect(UnitUtils.convert(1000, unit, unit)).toBe(1000);
+            for (let i: number = 0; i < notSupported.length; i++) {
+                let unit: Unit = notSupported[i];
+
+                it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
+                    expect(() => {
+                        UnitUtils.convert(1, Unit.METER, unit);
+                    }).toThrowError(/Not supported "To" unit./);
                 });
             }
         });
 
-        describe('Unsupported conversions', () => {
-            let fromError: string = 'Not supported "From" unit. Looks like we have a PR to make :)';
-            let toError: string = 'Not supported "To" unit. Looks like we have a PR to make :)';
-
-            it('Millimeter -> Meter', () => {
-                expect(() => {
-                    UnitUtils.convert(1000, Unit.MILLIMETER, Unit.MILE);
-                }).toThrowError(fromError);
+        describe('From Meter / Kilometer', () => {
+            it('To Meter / Kilometer', () => {
+                expect(UnitUtils.convert(1, Unit.METER_OVER_KILOMETER, Unit.METER_OVER_KILOMETER)).toBe(1);
             });
 
-            it('Mile -> Millimeter', () => {
-                expect(() => {
-                    UnitUtils.convert(1000, Unit.MILE, Unit.MILLIMETER);
-                }).toThrowError(toError);
+            it('To Inch / Mile', () => {
+                expect(UnitUtils.convert(1, Unit.METER_OVER_KILOMETER, Unit.INCH_OVER_MILE)).toBe(63.36005);
+            });
+
+            let notSupported: Array<Unit> = [
+                Unit.MILLIMETER,
+                Unit.CENTIMETER,
+                Unit.METER,
+                Unit.KILOMETER,
+                Unit.INCH,
+                Unit.FOOT,
+                Unit.YARD,
+                Unit.MILE,
+                Unit.NAUTICAL_MILE,
+                Unit.INCH_SQUARED,
+                Unit.FOOT_SQUARED,
+                Unit.YARD_SQUARED,
+                Unit.MILE_SQUARED,
+                Unit.NAUTICAL_MILE_SQUARED,
+                Unit.MILLIMETER_SQUARED,
+                Unit.CENTIMETER_SQUARED,
+                Unit.METER_SQUARED,
+                Unit.KILOMETER_SQUARED,
+                Unit.DEGREE,
+                Unit.RADIAN
+            ];
+
+            for (let i: number = 0; i < notSupported.length; i++) {
+                let unit: Unit = notSupported[i];
+
+                it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
+                    expect(() => {
+                        UnitUtils.convert(1, Unit.METER_OVER_KILOMETER, unit);
+                    }).toThrowError(/Not supported "To" unit./);
+                });
+            }
+        });
+
+        describe('From Degree', () => {
+            it('To Degree', () => {
+                expect(UnitUtils.convert(1, Unit.DEGREE, Unit.DEGREE)).toBe(1);
+            });
+
+            it('To Radian', () => {
+                expect(UnitUtils.convert(1, Unit.DEGREE, Unit.RADIAN)).toBe(0.017453292519943295);
+            });
+
+            let notSupported: Array<Unit> = [
+                Unit.MILLIMETER,
+                Unit.CENTIMETER,
+                Unit.METER,
+                Unit.KILOMETER,
+                Unit.INCH,
+                Unit.FOOT,
+                Unit.YARD,
+                Unit.MILE,
+                Unit.NAUTICAL_MILE,
+                Unit.INCH_SQUARED,
+                Unit.FOOT_SQUARED,
+                Unit.YARD_SQUARED,
+                Unit.MILE_SQUARED,
+                Unit.NAUTICAL_MILE_SQUARED,
+                Unit.MILLIMETER_SQUARED,
+                Unit.CENTIMETER_SQUARED,
+                Unit.METER_SQUARED,
+                Unit.KILOMETER_SQUARED,
+                Unit.METER_OVER_KILOMETER,
+                Unit.INCH_OVER_MILE
+            ];
+
+            for (let i: number = 0; i < notSupported.length; i++) {
+                let unit: Unit = notSupported[i];
+
+                it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
+                    expect(() => {
+                        UnitUtils.convert(1, Unit.DEGREE, unit);
+                    }).toThrowError(/Not supported "To" unit./);
+                });
+            }
+        });
+
+        describe('From Radian', () => {
+            it('To Degree', () => {
+                expect(UnitUtils.convert(1, Unit.RADIAN, Unit.DEGREE)).toBe(57.29577951308232);
+            });
+
+            it('To Radian', () => {
+                expect(UnitUtils.convert(1, Unit.RADIAN, Unit.RADIAN)).toBe(1);
+            });
+
+            it('To Millimeter', () => {
+                expect(UnitUtils.convert(1, Unit.RADIAN, Unit.MILLIMETER)).toBe(6371008800);
+            });
+
+            it('To Centimeter', () => {
+                expect(UnitUtils.convert(1, Unit.RADIAN, Unit.CENTIMETER)).toBe(637100880);
+            });
+
+            it('To Meter', () => {
+                expect(UnitUtils.convert(1, Unit.RADIAN, Unit.METER)).toBe(6371008.8);
+            });
+
+            it('To Kilometer', () => {
+                expect(UnitUtils.convert(1, Unit.RADIAN, Unit.KILOMETER)).toBe(6371.0088);
+            });
+
+            it('To Inch', () => {
+                expect(UnitUtils.convert(1, Unit.RADIAN, Unit.INCH)).toBe(250827253.55688);
+            });
+
+            it('To Foot', () => {
+                expect(UnitUtils.convert(1, Unit.RADIAN, Unit.FOOT)).toBe(20902259.842519682);
+            });
+
+            it('To Yard', () => {
+                expect(UnitUtils.convert(1, Unit.RADIAN, Unit.YARD)).toBe(6967398.9337679995);
+            });
+
+            it('To Mile', () => {
+                expect(UnitUtils.convert(1, Unit.RADIAN, Unit.MILE)).toBe(3958.7711732760013);
+            });
+
+            it('To Nautical Mile', () => {
+                expect(UnitUtils.convert(1, Unit.RADIAN, Unit.NAUTICAL_MILE)).toBe(3440.069546436285);
+            });
+
+            let notSupported: Array<Unit> = [
+                Unit.INCH_SQUARED,
+                Unit.FOOT_SQUARED,
+                Unit.YARD_SQUARED,
+                Unit.MILE_SQUARED,
+                Unit.NAUTICAL_MILE_SQUARED,
+                Unit.MILLIMETER_SQUARED,
+                Unit.CENTIMETER_SQUARED,
+                Unit.METER_SQUARED,
+                Unit.KILOMETER_SQUARED,
+                Unit.METER_OVER_KILOMETER,
+                Unit.INCH_OVER_MILE
+            ];
+
+            for (let i: number = 0; i < notSupported.length; i++) {
+                let unit: Unit = notSupported[i];
+
+                it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
+                    expect(() => {
+                        UnitUtils.convert(1, Unit.RADIAN, unit);
+                    }).toThrowError(/Not supported "To" unit./);
+                });
+            }
+        });
+
+        // describe('From Yard', () => {
+        //     it('To Yard', () => {
+        //         expect(UnitUtils.convert(1, Unit.YARD, Unit.YARD)).toBe(1);
+        //     });
+
+        //     it('To Meter', () => {
+        //         expect(UnitUtils.convert(1, Unit.YARD, Unit.METER)).toBe(null);
+        //     });
+        // });
+
+        describe('From Kilometer', () => {
+            it('To Kilometer', () => {
+                expect(UnitUtils.convert(1, Unit.KILOMETER, Unit.KILOMETER)).toBe(1);
+            });
+
+            it('To Meter', () => {
+                expect(UnitUtils.convert(1, Unit.KILOMETER, Unit.METER)).toBe(1000);
+            });
+        });
+
+        describe('From Meter\u00B2', () => {
+            it('To Meter\u00B2', () => {
+                expect(UnitUtils.convert(1, Unit.METER_SQUARED, Unit.METER_SQUARED)).toBe(1);
+            });
+
+            it('To Foot\u00B2', () => {
+                expect(UnitUtils.convert(1, Unit.METER_SQUARED, Unit.FOOT_SQUARED)).toBe(10.763915051182416);
+            });
+        });
+
+        describe('From Foot', () => {
+            it('To Foot', () => {
+                expect(UnitUtils.convert(1, Unit.FOOT, Unit.FOOT)).toBe(1);
+            });
+
+            it('To Meter', () => {
+                expect(UnitUtils.convert(1, Unit.FOOT, Unit.METER)).toBe(0.3048);
+            });
+        });
+
+        describe('From Mile', () => {
+            it('To Mile', () => {
+                expect(UnitUtils.convert(1, Unit.MILE, Unit.MILE)).toBe(1);
+            });
+
+            it('To Meter', () => {
+                expect(UnitUtils.convert(1, Unit.MILE, Unit.METER)).toBe(1609.34);
+            });
+        });
+
+        describe('From Yard\u00B2', () => {
+            it('To Yard\u00B2', () => {
+                expect(UnitUtils.convert(1, Unit.YARD_SQUARED, Unit.YARD_SQUARED)).toBe(1);
+            });
+
+            it('To Meter\u00B2', () => {
+                expect(UnitUtils.convert(1, Unit.YARD_SQUARED, Unit.METER_SQUARED)).toBe(0.836127);
+            });
+        });
+
+        describe('From Foot\u00B2', () => {
+            it('To Foot\u00B2', () => {
+                expect(UnitUtils.convert(1, Unit.FOOT_SQUARED, Unit.FOOT_SQUARED)).toBe(1);
+            });
+
+            it('To Meter\u00B2', () => {
+                expect(UnitUtils.convert(1, Unit.FOOT_SQUARED, Unit.METER_SQUARED)).toBe(0.092903);
             });
         });
     });
