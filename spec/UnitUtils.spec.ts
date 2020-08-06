@@ -2,6 +2,7 @@
 import {UnitUtils} from '../src/UnitUtils';
 import { Unit, UnitType } from '../src/api';
 import { LENGTH_OVER_LENGTH, AREA, ANGLE, LINEAR } from '../src/Unit';
+import Math from '../src/Math';
 
 describe('UnitUtils', () => {
     
@@ -1074,6 +1075,83 @@ describe('UnitUtils', () => {
                             UnitUtils.convert(1, Unit.RADIAN, unit);
                         }).toThrowError(/Not supported "To" unit./);
                     });
+                }
+            }
+        });
+
+        describe('Conversion should be consistent', () => {
+            const THRESHOLD = 1.0e-4;
+
+            let unitList: Array<Unit> = UnitUtils.getUnitList();
+
+            let valueTest: Array<number> = [
+                0,
+                1,
+                5,
+                10,
+                123.5
+            ]
+
+            for (let i: number = 0; i < valueTest.length; i++) {
+                for (let x: number = 0; x < unitList.length; x++) {
+                    for (let y: number = 0; y < unitList.length; y++) {
+                        if (x === y) {
+                            continue;
+                        }
+
+                        let testValue: number = valueTest[i];
+                        let unit1: Unit = unitList[x];
+                        let unit2: Unit = unitList[y];
+
+                        let unit1name: string = null;
+                        let unit2name: string = null;
+
+                        if (unit1 === Unit.METER_OVER_KILOMETER) {
+                            unit1name = 'm / km';
+                        }
+                        else if (unit1 === Unit.INCH_OVER_MILE) {
+                            unit1name = 'in / mi';
+                        }
+                        else {
+                            unit1name = UnitUtils.getUnitText(unit1);
+                        }
+
+                        if (unit2 === Unit.METER_OVER_KILOMETER) {
+                            unit2name = 'm / km';
+                        }
+                        else if (unit2 === Unit.INCH_OVER_MILE) {
+                            unit2name = 'in / mi';
+                        }
+                        else {
+                            unit2name = UnitUtils.getUnitText(unit2);
+                        }
+
+                        // Normalize radian/degrees
+                        if (unit1 === Unit.RADIAN) {
+                            testValue = testValue % (Math.PI * 2);
+                        }
+                        else if (unit1 === Unit.DEGREE) {
+                            testValue = testValue % 360;
+                        }
+
+                        it(`${unit1name} <-> ${unit2name} @ ${testValue}`, () => {
+                            try {
+                                let value: number = UnitUtils.convert(testValue, unit1, unit2);
+                                let v: number = UnitUtils.convert(value, unit2, unit1);
+
+                                // Floating point numbers are not accurate, but they should be significantly close.
+                                let diff = v - testValue;
+
+                                expect(diff).toBeGreaterThanOrEqual(-THRESHOLD);
+                                expect(diff).toBeLessThanOrEqual(THRESHOLD);
+                            }
+                            catch (ex) {
+                                if (!/Not supported/.test(ex.toString())) {
+                                    fail(ex);
+                                }
+                            }
+                        });
+                    }
                 }
             }
         });

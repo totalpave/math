@@ -14,7 +14,7 @@ const SUPERSCRIPT_TWO: string = '\u00B2';
 export class UnitUtils {
     private constructor() {}
 
-    public static convert(value: number, from: Unit, to: Unit): number {
+    public static convert(value: number, from: Unit, to: Unit, precision?: number): number {
         let result: number = null;
 
         // if (UnitUtils.getUnitType(from) !== UnitUtils.getUnitType(to)) {
@@ -90,6 +90,10 @@ export class UnitUtils {
                     result = UnitUtils._fromDegree(value, to);
                     break;
                 default: this._throwNotSupportedFromUnit();
+            }
+
+            if (precision !== undefined && precision !== null) {
+                result = Math.round(result, precision);
             }
         }
         else {
