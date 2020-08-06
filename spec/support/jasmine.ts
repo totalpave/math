@@ -1,5 +1,6 @@
 
 import Jasmine = require('jasmine');
+import {ProgressReporter} from '@breautek/jasmine-progress-reporter';
 import {SpecReporter} from 'jasmine-spec-reporter';
 
 let jasmine = new Jasmine(null);
@@ -14,7 +15,12 @@ let config: any = {
 };
 
 jasmine.env.clearReporters();
-jasmine.addReporter(<any>(new SpecReporter()));
+if (process.env.CI) {
+    jasmine.addReporter(<any>(new SpecReporter()));
+}
+else {
+    jasmine.addReporter(<any>(new ProgressReporter()));
+}
 
 jasmine.loadConfig(config);
 
