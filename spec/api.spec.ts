@@ -5,10 +5,15 @@ import {UnitMode} from '../src/UnitMode';
 import {Unit} from '../src/Unit';
 import {UnitType} from '../src/UnitType';
 import {UnitUtils} from '../src/UnitUtils';
+import {UnitConverter} from '../src/UnitConverter';
 
 describe('Public API', () => {
     it('Math', () => {
         expect(api.Math).toBe(TPMath);
+    });
+
+    it('UnitConverter', () => {
+        expect(api.UnitConverter).toBe(UnitConverter);
     });
 
     it('UnitMode', () => {

@@ -73,7 +73,8 @@ class TPMath implements Math {
     
     public round(x: number, decimalPlaces: number = 0): number {
         let precision = Math.pow(10, Math.floor(decimalPlaces));
-        return native.round(x * precision) / precision;
+        let value: number = native.round(x * precision) / precision;
+        return value;
     }
     
     public sin(x: number): number {

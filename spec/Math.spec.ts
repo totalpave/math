@@ -395,7 +395,7 @@ describe('Math', () => {
                     {
                         value: NUM1,
                         precision: -4,
-                        result: 0
+                        result: -0
                     }
                 ]);
             });

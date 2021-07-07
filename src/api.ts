@@ -6,3 +6,4 @@ export {UnitMode} from './UnitMode';
 export {Unit} from './Unit';
 export {UnitType} from './UnitType';
 export {UnitUtils} from './UnitUtils';
+export {UnitConverter} from './UnitConverter';
