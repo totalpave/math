@@ -85,6 +85,46 @@ export class UnitUtils {
                 return 'rad';
             case Unit.DEGREE:
                 return '\u00b0';
+            case Unit.PER_MILLIMETER:
+                return '/' + UnitUtils.getUnitText(Unit.MILLIMETER);
+            case Unit.PER_CENTIMETER:
+                return '/' + UnitUtils.getUnitText(Unit.CENTIMETER);
+            case Unit.PER_METER:
+                return '/' + UnitUtils.getUnitText(Unit.METER);
+            case Unit.PER_KILOMETER:
+                return '/' + UnitUtils.getUnitText(Unit.KILOMETER);
+            case Unit.PER_INCH:
+                return '/' + UnitUtils.getUnitText(Unit.INCH);
+            case Unit.PER_FOOT:
+                return '/' + UnitUtils.getUnitText(Unit.FOOT);
+            case Unit.PER_YARD:
+                return '/' + UnitUtils.getUnitText(Unit.YARD);
+            case Unit.PER_MILE:
+                return '/' + UnitUtils.getUnitText(Unit.MILE);
+            case Unit.PER_NAUTICAL_MILE:
+                return '/' + UnitUtils.getUnitText(Unit.NAUTICAL_MILE);
+            case Unit.PER_MILLIMETER_SQUARED:
+                return '/' + UnitUtils.getUnitText(Unit.MILLIMETER_SQUARED);
+            case Unit.PER_CENTIMETER_SQUARED:
+                return '/' + UnitUtils.getUnitText(Unit.CENTIMETER_SQUARED);
+            case Unit.PER_METER_SQUARED:
+                return '/' + UnitUtils.getUnitText(Unit.METER_SQUARED);
+            case Unit.PER_KILOMETER_SQUARED:
+                return '/' + UnitUtils.getUnitText(Unit.KILOMETER_SQUARED);
+            case Unit.PER_INCH_SQUARED:
+                return '/' + UnitUtils.getUnitText(Unit.INCH_SQUARED);
+            case Unit.PER_FOOT_SQUARED:
+                return '/' + UnitUtils.getUnitText(Unit.FOOT_SQUARED);
+            case Unit.PER_YARD_SQUARED:
+                return '/' + UnitUtils.getUnitText(Unit.YARD_SQUARED);
+            case Unit.PER_MILE_SQUARED:
+                return '/' + UnitUtils.getUnitText(Unit.MILE_SQUARED);
+            case Unit.PER_NAUTICAL_MILE_SQUARED:
+                return '/' + UnitUtils.getUnitText(Unit.NAUTICAL_MILE_SQUARED);
+            case Unit.PER_DEGREE:
+                return '/' + UnitUtils.getUnitText(Unit.DEGREE);
+            case Unit.PER_RADIAN:
+                return '/' + UnitUtils.getUnitText(Unit.RADIAN);
             default:
                 return '';
         }

@@ -1,60 +1,121 @@
 
 // NOTE: If you add/remove units from here, please update UnitUtils.getUnitText.
-export enum Unit {
-    // METRIC
-    MILLIMETER              = 1,
-    CENTIMETER              = Unit.MILLIMETER << 1,
-    METER                   = Unit.CENTIMETER << 1,
-    KILOMETER               = Unit.METER << 1,
 
-    MILLIMETER_SQUARED      = Unit.KILOMETER << 1,
-    CENTIMETER_SQUARED      = Unit.MILLIMETER_SQUARED << 1,
-    METER_SQUARED           = Unit.CENTIMETER_SQUARED << 1,
-    KILOMETER_SQUARED       = Unit.METER_SQUARED << 1,
-
-    // Imperial
-    INCH                    = Unit.KILOMETER_SQUARED << 1,
-    FOOT                    = Unit.INCH << 1,
-    YARD                    = Unit.FOOT << 1,
-    MILE                    = Unit.YARD << 1,
-    NAUTICAL_MILE           = Unit.MILE << 1,
-
-    INCH_SQUARED            = Unit.NAUTICAL_MILE << 1,
-    FOOT_SQUARED            = Unit.INCH_SQUARED << 1,
-    YARD_SQUARED            = Unit.FOOT_SQUARED << 1,
-    MILE_SQUARED            = Unit.YARD_SQUARED << 1,
-    NAUTICAL_MILE_SQUARED   = Unit.MILE_SQUARED << 1,
-
-    METER_OVER_KILOMETER    = Unit.NAUTICAL_MILE_SQUARED << 1,
-    INCH_OVER_MILE          = Unit.METER_OVER_KILOMETER << 1,
-
-    DEGREE                  = Unit.INCH_OVER_MILE << 1,
-    RADIAN                  = Unit.DEGREE << 1
+export enum LinearUnit {
+    MILLIMETER,
+    CENTIMETER,
+    METER,
+    KILOMETER,
+    INCH,
+    FOOT,
+    YARD,
+    MILE,
+    NAUTICAL_MILE,
 }
 
-export const LINEAR: number = (
-    Unit.MILLIMETER |
-    Unit.CENTIMETER |
-    Unit.METER |
-    Unit.KILOMETER |
-    Unit.INCH |
-    Unit.FOOT |
-    Unit.YARD |
-    Unit.MILE |
-    Unit.NAUTICAL_MILE
-);
+export enum SquaredUnit {
+    MILLIMETER_SQUARED,
+    CENTIMETER_SQUARED,
+    METER_SQUARED,
+    KILOMETER_SQUARED,
+    INCH_SQUARED,
+    FOOT_SQUARED,
+    YARD_SQUARED,
+    MILE_SQUARED,
+    NAUTICAL_MILE_SQUARED
+}
 
-export const AREA: number = (
-    Unit.METER_SQUARED |
-    Unit.MILLIMETER_SQUARED |
-    Unit.CENTIMETER_SQUARED |
-    Unit.KILOMETER_SQUARED |
-    Unit.INCH_SQUARED |
-    Unit.YARD_SQUARED |
-    Unit.FOOT_SQUARED |
-    Unit.MILE_SQUARED
-);
+export enum AngleUnit {
+    DEGREE,
+    RADIAN
+}
 
-export const LENGTH_OVER_LENGTH: number = Unit.METER_OVER_KILOMETER | Unit.INCH_OVER_MILE;
+export enum LengthOverLengthUnit {
+    METER_OVER_KILOMETER,
+    INCH_OVER_MILE
+}
 
-export const ANGLE: number = Unit.DEGREE | Unit.RADIAN;
+export enum PerLinearUnit {
+    MILLIMETER,
+    CENTIMETER,
+    METER,
+    KILOMETER,
+    INCH,
+    FOOT,
+    YARD,
+    MILE,
+    NAUTICAL_MILE
+}
+
+export enum PerSquaredUnit {
+    MILLIMETER_SQUARED,
+    CENTIMETER_SQUARED,
+    METER_SQUARED,
+    KILOMETER_SQUARED,
+    INCH_SQUARED,
+    FOOT_SQUARED,
+    YARD_SQUARED,
+    MILE_SQUARED,
+    NAUTICAL_MILE_SQUARED
+}
+
+export enum PerAngleUnit {
+    DEGREE,
+    RADIAN
+}
+
+export enum Unit {
+    DEGREE,
+    RADIAN
+}
+
+// export const LINEAR: number = (
+//     Unit.MILLIMETER |
+//     Unit.CENTIMETER |
+//     Unit.METER |
+//     Unit.KILOMETER |
+//     Unit.INCH |
+//     Unit.FOOT |
+//     Unit.YARD |
+//     Unit.MILE |
+//     Unit.NAUTICAL_MILE
+// );
+
+// export const AREA: number = (
+//     Unit.METER_SQUARED |
+//     Unit.MILLIMETER_SQUARED |
+//     Unit.CENTIMETER_SQUARED |
+//     Unit.KILOMETER_SQUARED |
+//     Unit.INCH_SQUARED |
+//     Unit.YARD_SQUARED |
+//     Unit.FOOT_SQUARED |
+//     Unit.MILE_SQUARED
+// );
+
+// export const LENGTH_OVER_LENGTH: number = Unit.METER_OVER_KILOMETER | Unit.INCH_OVER_MILE;
+
+// export const ANGLE: number = Unit.DEGREE | Unit.RADIAN;
+
+// export const PER_UNIT: number = (
+//     Unit.PER_MILLIMETER |
+//     Unit.PER_CENTIMETER |
+//     Unit.PER_METER |
+//     Unit.PER_KILOMETER |
+//     Unit.PER_INCH |
+//     Unit.PER_FOOT |
+//     Unit.PER_YARD |
+//     Unit.PER_MILE |
+//     Unit.PER_NAUTICAL_MILE
+// );
+
+// export const PER_UNIT_SQUARED: number = (
+//     Unit.PER_MILLIMETER_SQUARED |
+//     Unit.PER_CENTIMETER_SQUARED |
+//     Unit.PER_METER_SQUARED |
+//     Unit.PER_KILOMETER_SQUARED |
+//     Unit.PER_INCH_SQUARED |
+//     Unit.PER_FOOT_SQUARED |
+//     Unit.PER_YARD_SQUARED |
+//     Unit.PER_MILE_SQUARED |
+//     Unit.PER_NAUTICAL_MILE_SQUARED
+// );
