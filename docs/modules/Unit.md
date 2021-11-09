@@ -1,4 +1,4 @@
-[@totalpave/math - v1.0.1](../README.md) / [Exports](../modules.md) / Unit
+[@totalpave/math - v1.0.2](../README.md) / [Exports](../modules.md) / Unit
 
 # Module: Unit
 
@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[Unit.ts:60](https://github.com/totalpave/math/blob/0091020/src/Unit.ts#L60)
+[Unit.ts:60](https://github.com/totalpave/math/blob/0f55c9c/src/Unit.ts#L60)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:47](https://github.com/totalpave/math/blob/0091020/src/Unit.ts#L47)
+[Unit.ts:47](https://github.com/totalpave/math/blob/0f55c9c/src/Unit.ts#L47)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:58](https://github.com/totalpave/math/blob/0091020/src/Unit.ts#L58)
+[Unit.ts:58](https://github.com/totalpave/math/blob/0f55c9c/src/Unit.ts#L58)
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[Unit.ts:35](https://github.com/totalpave/math/blob/0091020/src/Unit.ts#L35)
+[Unit.ts:35](https://github.com/totalpave/math/blob/0f55c9c/src/Unit.ts#L35)

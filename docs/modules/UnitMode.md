@@ -1,4 +1,4 @@
-[@totalpave/math - v1.0.1](../README.md) / [Exports](../modules.md) / UnitMode
+[@totalpave/math - v1.0.2](../README.md) / [Exports](../modules.md) / UnitMode
 
 # Module: UnitMode
 

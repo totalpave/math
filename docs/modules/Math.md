@@ -1,4 +1,4 @@
-[@totalpave/math - v1.0.1](../README.md) / [Exports](../modules.md) / Math
+[@totalpave/math - v1.0.2](../README.md) / [Exports](../modules.md) / Math
 
 # Module: Math
 
@@ -26,4 +26,4 @@ Renames and exports: [Math](Math.md#math)
 
 #### Defined in
 
-[Math.ts:258](https://github.com/totalpave/math/blob/0091020/src/Math.ts#L258)
+[Math.ts:258](https://github.com/totalpave/math/blob/0f55c9c/src/Math.ts#L258)
