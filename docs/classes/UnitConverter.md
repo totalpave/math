@@ -1,4 +1,4 @@
-[@totalpave/math - v1.0.2](../README.md) / [Exports](../modules.md) / UnitConverter
+[@totalpave/math - v1.0.3](../README.md) / [Exports](../modules.md) / UnitConverter
 
 # Class: UnitConverter
 
@@ -29,4 +29,4 @@
 
 #### Defined in
 
-[UnitConverter.ts:10](https://github.com/totalpave/math/blob/020bdb2/src/UnitConverter.ts#L10)
+[UnitConverter.ts:10](https://github.com/totalpave/math/blob/2908bfd/src/UnitConverter.ts#L10)

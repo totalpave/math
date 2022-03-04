@@ -1,4 +1,4 @@
-[@totalpave/math - v1.0.2](../README.md) / [Exports](../modules.md) / UnitUtils
+[@totalpave/math - v1.0.3](../README.md) / [Exports](../modules.md) / UnitUtils
 
 # Class: UnitUtils
 
@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[UnitUtils.ts:17](https://github.com/totalpave/math/blob/020bdb2/src/UnitUtils.ts#L17)
+[UnitUtils.ts:17](https://github.com/totalpave/math/blob/2908bfd/src/UnitUtils.ts#L17)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 #### Defined in
 
-[UnitUtils.ts:93](https://github.com/totalpave/math/blob/020bdb2/src/UnitUtils.ts#L93)
+[UnitUtils.ts:93](https://github.com/totalpave/math/blob/2908bfd/src/UnitUtils.ts#L93)
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 #### Defined in
 
-[UnitUtils.ts:46](https://github.com/totalpave/math/blob/020bdb2/src/UnitUtils.ts#L46)
+[UnitUtils.ts:46](https://github.com/totalpave/math/blob/2908bfd/src/UnitUtils.ts#L46)
 
 ___
 
@@ -86,4 +86,4 @@ ___
 
 #### Defined in
 
-[UnitUtils.ts:23](https://github.com/totalpave/math/blob/020bdb2/src/UnitUtils.ts#L23)
+[UnitUtils.ts:23](https://github.com/totalpave/math/blob/2908bfd/src/UnitUtils.ts#L23)
