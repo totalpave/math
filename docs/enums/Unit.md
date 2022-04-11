@@ -37,7 +37,7 @@
 
 #### Defined in
 
-[Unit.ts:6](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L6)
+[Unit.ts:6](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L6)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:11](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L11)
+[Unit.ts:11](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L11)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:31](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L31)
+[Unit.ts:31](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L31)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:17](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L17)
+[Unit.ts:17](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L17)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:23](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L23)
+[Unit.ts:23](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L23)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:16](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L16)
+[Unit.ts:16](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L16)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:29](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L29)
+[Unit.ts:29](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L29)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:22](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L22)
+[Unit.ts:22](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L22)
 
 ___
 
@@ -117,7 +117,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:8](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L8)
+[Unit.ts:8](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L8)
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:13](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L13)
+[Unit.ts:13](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L13)
 
 ___
 
@@ -137,7 +137,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:7](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L7)
+[Unit.ts:7](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L7)
 
 ___
 
@@ -147,7 +147,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:28](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L28)
+[Unit.ts:28](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L28)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:12](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L12)
+[Unit.ts:12](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L12)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:19](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L19)
+[Unit.ts:19](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L19)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:25](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L25)
+[Unit.ts:25](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L25)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:5](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L5)
+[Unit.ts:5](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L5)
 
 ___
 
@@ -197,7 +197,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:10](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L10)
+[Unit.ts:10](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L10)
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:20](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L20)
+[Unit.ts:20](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L20)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:26](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L26)
+[Unit.ts:26](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L26)
 
 ___
 
@@ -227,7 +227,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:32](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L32)
+[Unit.ts:32](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L32)
 
 ___
 
@@ -237,7 +237,7 @@ ___
 
 #### Defined in
 
-[Unit.ts:18](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L18)
+[Unit.ts:18](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L18)
 
 ___
 
@@ -247,4 +247,4 @@ ___
 
 #### Defined in
 
-[Unit.ts:24](https://github.com/totalpave/math/blob/2908bfd/src/Unit.ts#L24)
+[Unit.ts:24](https://github.com/totalpave/math/blob/92e3396/src/Unit.ts#L24)

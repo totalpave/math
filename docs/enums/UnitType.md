@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[UnitType.ts:7](https://github.com/totalpave/math/blob/2908bfd/src/UnitType.ts#L7)
+[UnitType.ts:7](https://github.com/totalpave/math/blob/92e3396/src/UnitType.ts#L7)
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-[UnitType.ts:4](https://github.com/totalpave/math/blob/2908bfd/src/UnitType.ts#L4)
+[UnitType.ts:4](https://github.com/totalpave/math/blob/92e3396/src/UnitType.ts#L4)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[UnitType.ts:6](https://github.com/totalpave/math/blob/2908bfd/src/UnitType.ts#L6)
+[UnitType.ts:6](https://github.com/totalpave/math/blob/92e3396/src/UnitType.ts#L6)
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-[UnitType.ts:5](https://github.com/totalpave/math/blob/2908bfd/src/UnitType.ts#L5)
+[UnitType.ts:5](https://github.com/totalpave/math/blob/92e3396/src/UnitType.ts#L5)
 
 ___
 
@@ -60,4 +60,4 @@ ___
 
 #### Defined in
 
-[UnitType.ts:3](https://github.com/totalpave/math/blob/2908bfd/src/UnitType.ts#L3)
+[UnitType.ts:3](https://github.com/totalpave/math/blob/92e3396/src/UnitType.ts#L3)

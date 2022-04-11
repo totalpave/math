@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[UnitMode.ts:4](https://github.com/totalpave/math/blob/2908bfd/src/UnitMode.ts#L4)
+[UnitMode.ts:4](https://github.com/totalpave/math/blob/92e3396/src/UnitMode.ts#L4)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[UnitMode.ts:3](https://github.com/totalpave/math/blob/2908bfd/src/UnitMode.ts#L3)
+[UnitMode.ts:3](https://github.com/totalpave/math/blob/92e3396/src/UnitMode.ts#L3)

@@ -37,4 +37,4 @@ Renames and re-exports [Math](modules.md#math)
 
 #### Defined in
 
-[Math.ts:258](https://github.com/totalpave/math/blob/2908bfd/src/Math.ts#L258)
+[Math.ts:258](https://github.com/totalpave/math/blob/92e3396/src/Math.ts#L258)
