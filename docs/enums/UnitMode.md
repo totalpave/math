@@ -1,4 +1,4 @@
-[@totalpave/math - v1.0.4](../README.md) / [Exports](../modules.md) / UnitMode
+[@totalpave/math - v1.0.5](../README.md) / [Exports](../modules.md) / UnitMode
 
 # Enumeration: UnitMode
 
@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[UnitMode.ts:4](https://github.com/totalpave/math/blob/7933c1f/src/UnitMode.ts#L4)
+[UnitMode.ts:4](https://github.com/totalpave/math/blob/630ea33/src/UnitMode.ts#L4)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[UnitMode.ts:3](https://github.com/totalpave/math/blob/7933c1f/src/UnitMode.ts#L3)
+[UnitMode.ts:3](https://github.com/totalpave/math/blob/630ea33/src/UnitMode.ts#L3)
