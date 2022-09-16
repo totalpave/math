@@ -4,27 +4,27 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [IMPERIAL](UnitMode.md#imperial)
 - [METRIC](UnitMode.md#metric)
 
-## Enumeration members
+## Enumeration Members
 
 ### IMPERIAL
 
-• **IMPERIAL** = `1`
+• **IMPERIAL** = ``1``
 
 #### Defined in
 
-[UnitMode.ts:4](https://github.com/totalpave/math/blob/213772f/src/UnitMode.ts#L4)
+[UnitMode.ts:4](https://github.com/totalpave/math/blob/7933c1f/src/UnitMode.ts#L4)
 
 ___
 
 ### METRIC
 
-• **METRIC** = `0`
+• **METRIC** = ``0``
 
 #### Defined in
 
-[UnitMode.ts:3](https://github.com/totalpave/math/blob/213772f/src/UnitMode.ts#L3)
+[UnitMode.ts:3](https://github.com/totalpave/math/blob/7933c1f/src/UnitMode.ts#L3)

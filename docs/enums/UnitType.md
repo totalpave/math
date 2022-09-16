@@ -4,7 +4,7 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [ANGLE](UnitType.md#angle)
 - [AREA](UnitType.md#area)
@@ -12,52 +12,52 @@
 - [LENGTH\_OVER\_LENGTH](UnitType.md#length_over_length)
 - [LINEAR](UnitType.md#linear)
 
-## Enumeration members
+## Enumeration Members
 
 ### ANGLE
 
-• **ANGLE** = `4`
+• **ANGLE** = ``4``
 
 #### Defined in
 
-[UnitType.ts:7](https://github.com/totalpave/math/blob/213772f/src/UnitType.ts#L7)
+[UnitType.ts:7](https://github.com/totalpave/math/blob/7933c1f/src/UnitType.ts#L7)
 
 ___
 
 ### AREA
 
-• **AREA** = `1`
+• **AREA** = ``1``
 
 #### Defined in
 
-[UnitType.ts:4](https://github.com/totalpave/math/blob/213772f/src/UnitType.ts#L4)
+[UnitType.ts:4](https://github.com/totalpave/math/blob/7933c1f/src/UnitType.ts#L4)
 
 ___
 
 ### COUNT
 
-• **COUNT** = `3`
+• **COUNT** = ``3``
 
 #### Defined in
 
-[UnitType.ts:6](https://github.com/totalpave/math/blob/213772f/src/UnitType.ts#L6)
+[UnitType.ts:6](https://github.com/totalpave/math/blob/7933c1f/src/UnitType.ts#L6)
 
 ___
 
 ### LENGTH\_OVER\_LENGTH
 
-• **LENGTH\_OVER\_LENGTH** = `2`
+• **LENGTH\_OVER\_LENGTH** = ``2``
 
 #### Defined in
 
-[UnitType.ts:5](https://github.com/totalpave/math/blob/213772f/src/UnitType.ts#L5)
+[UnitType.ts:5](https://github.com/totalpave/math/blob/7933c1f/src/UnitType.ts#L5)
 
 ___
 
 ### LINEAR
 
-• **LINEAR** = `0`
+• **LINEAR** = ``0``
 
 #### Defined in
 
-[UnitType.ts:3](https://github.com/totalpave/math/blob/213772f/src/UnitType.ts#L3)
+[UnitType.ts:3](https://github.com/totalpave/math/blob/7933c1f/src/UnitType.ts#L3)

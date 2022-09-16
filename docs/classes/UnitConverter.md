@@ -29,4 +29,4 @@
 
 #### Defined in
 
-[UnitConverter.ts:10](https://github.com/totalpave/math/blob/213772f/src/UnitConverter.ts#L10)
+[UnitConverter.ts:10](https://github.com/totalpave/math/blob/7933c1f/src/UnitConverter.ts#L10)
