@@ -4,6 +4,10 @@
   "description": "Math library",
   "main": "lib/api.js",
   "types": "lib/api.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "scripts": {
     "lint": "eslint --ext .ts,.tsx '?(src|spec)/**/*.?(ts|tsx)' --cache",
     "docs": "typedoc --excludePrivate --includeVersion -readme ./README.md --out ./docs ./src/api.ts",
