@@ -47,7 +47,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (AREA | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.MILLIMETER, unit);
@@ -97,8 +98,9 @@ describe('UnitConverter', () => {
             let unitList: Array<Unit> = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
-
-                if (unit & (AREA | LENGTH_OVER_LENGTH | ANGLE)) {
+                
+                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.CENTIMETER, unit);
@@ -149,7 +151,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (AREA | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.METER, unit);
@@ -200,7 +203,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (AREA | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.KILOMETER, unit);
@@ -251,7 +255,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (LINEAR | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.MILLIMETER_SQUARED, unit);
@@ -302,7 +307,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (LINEAR | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.CENTIMETER_SQUARED, unit);
@@ -353,7 +359,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (LINEAR | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.METER_SQUARED, unit);
@@ -404,7 +411,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (LINEAR | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.KILOMETER_SQUARED, unit);
@@ -455,7 +463,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (AREA | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.INCH, unit);
@@ -506,7 +515,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (AREA | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.FOOT, unit);
@@ -557,7 +567,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (AREA | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.YARD, unit);
@@ -608,7 +619,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (AREA | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.MILE, unit);
@@ -659,7 +671,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (AREA | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.NAUTICAL_MILE, unit);
@@ -710,7 +723,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (LINEAR | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.INCH_SQUARED, unit);
@@ -761,7 +775,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (LINEAR | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.FOOT_SQUARED, unit);
@@ -812,7 +827,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (LINEAR | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.YARD_SQUARED, unit);
@@ -863,7 +879,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (LINEAR | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.MILE_SQUARED, unit);
@@ -914,7 +931,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (LINEAR | LENGTH_OVER_LENGTH | ANGLE)) {
+                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.NAUTICAL_MILE_SQUARED, unit);
@@ -937,7 +955,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (AREA | LINEAR | ANGLE)) {
+                let notSupported: Array<string> = AREA.concat(LINEAR).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.METER_OVER_KILOMETER, unit);
@@ -960,7 +979,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (AREA | LINEAR | ANGLE)) {
+                let notSupported: Array<string> = AREA.concat(LINEAR).concat(ANGLE);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.INCH_OVER_MILE, unit);
@@ -983,7 +1003,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (AREA | LENGTH_OVER_LENGTH | LINEAR)) {
+                let notSupported: Array<string> = AREA.concat(LINEAR).concat(LENGTH_OVER_LENGTH);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.DEGREE, unit);
@@ -1042,7 +1063,8 @@ describe('UnitConverter', () => {
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                if (unit & (AREA | LENGTH_OVER_LENGTH)) {
+                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH);
+                if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.RADIAN, unit);
@@ -1076,8 +1098,8 @@ describe('UnitConverter', () => {
                         let unit1: Unit = unitList[x];
                         let unit2: Unit = unitList[y];
 
-                        let unit1name: string = null;
-                        let unit2name: string = null;
+                        let unit1name: string = '';
+                        let unit2name: string = '';
 
                         if (unit1 === Unit.METER_OVER_KILOMETER) {
                             unit1name = 'm / km';

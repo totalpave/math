@@ -113,7 +113,7 @@ describe('UnitUtils', () => {
 
         it('Unknown unit throws', () => {
             expect(() => {
-                UnitUtils.getUnitType(<Unit>Infinity);
+                UnitUtils.getUnitType(<Unit>'xxx');
             }).toThrowError(/Unknown unit/);
         });
     });

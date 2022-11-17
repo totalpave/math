@@ -2,59 +2,58 @@
 // NOTE: If you add/remove units from here, please update UnitUtils.getUnitText.
 export enum Unit {
     // METRIC
-    MILLIMETER              = 1,
-    CENTIMETER              = Unit.MILLIMETER << 1,
-    METER                   = Unit.CENTIMETER << 1,
-    KILOMETER               = Unit.METER << 1,
+    MILLIMETER              = 'mm',
+    CENTIMETER              = 'cm',
+    METER                   = 'm',
+    KILOMETER               = 'km',
 
-    MILLIMETER_SQUARED      = Unit.KILOMETER << 1,
-    CENTIMETER_SQUARED      = Unit.MILLIMETER_SQUARED << 1,
-    METER_SQUARED           = Unit.CENTIMETER_SQUARED << 1,
-    KILOMETER_SQUARED       = Unit.METER_SQUARED << 1,
+    MILLIMETER_SQUARED      = 'mm2',
+    CENTIMETER_SQUARED      = 'cm2',
+    METER_SQUARED           = 'm2',
+    KILOMETER_SQUARED       = 'km2',
 
     // Imperial
-    INCH                    = Unit.KILOMETER_SQUARED << 1,
-    FOOT                    = Unit.INCH << 1,
-    YARD                    = Unit.FOOT << 1,
-    MILE                    = Unit.YARD << 1,
-    NAUTICAL_MILE           = Unit.MILE << 1,
+    INCH                    = 'in',
+    FOOT                    = 'ft',
+    YARD                    = 'yd',
+    MILE                    = 'mi',
+    NAUTICAL_MILE           = 'nmi',
 
-    INCH_SQUARED            = Unit.NAUTICAL_MILE << 1,
-    FOOT_SQUARED            = Unit.INCH_SQUARED << 1,
-    YARD_SQUARED            = Unit.FOOT_SQUARED << 1,
-    MILE_SQUARED            = Unit.YARD_SQUARED << 1,
-    NAUTICAL_MILE_SQUARED   = Unit.MILE_SQUARED << 1,
+    INCH_SQUARED            = 'in2',
+    FOOT_SQUARED            = 'ft2',
+    YARD_SQUARED            = 'yd2',
+    MILE_SQUARED            = 'mi2',
+    NAUTICAL_MILE_SQUARED   = 'nmi2',
 
-    METER_OVER_KILOMETER    = Unit.NAUTICAL_MILE_SQUARED << 1,
-    INCH_OVER_MILE          = Unit.METER_OVER_KILOMETER << 1,
+    METER_OVER_KILOMETER    = 'm/km',
+    INCH_OVER_MILE          = 'in/mi',
 
-    DEGREE                  = Unit.INCH_OVER_MILE << 1,
-    RADIAN                  = Unit.DEGREE << 1
+    DEGREE                  = 'deg',
+    RADIAN                  = 'rad'
 }
 
-export const LINEAR: number = (
-    Unit.MILLIMETER |
-    Unit.CENTIMETER |
-    Unit.METER |
-    Unit.KILOMETER |
-    Unit.INCH |
-    Unit.FOOT |
-    Unit.YARD |
-    Unit.MILE |
+export const LINEAR: Array<string> = [
+    Unit.MILLIMETER,
+    Unit.CENTIMETER,
+    Unit.METER,
+    Unit.KILOMETER,
+    Unit.INCH,
+    Unit.FOOT,
+    Unit.YARD,
+    Unit.MILE,
     Unit.NAUTICAL_MILE
-);
+];
 
-export const AREA: number = (
-    Unit.METER_SQUARED |
-    Unit.MILLIMETER_SQUARED |
-    Unit.CENTIMETER_SQUARED |
-    Unit.KILOMETER_SQUARED |
-    Unit.INCH_SQUARED |
-    Unit.YARD_SQUARED |
-    Unit.FOOT_SQUARED |
+export const AREA: Array<string> = [
+    Unit.METER_SQUARED,
+    Unit.MILLIMETER_SQUARED,
+    Unit.CENTIMETER_SQUARED,
+    Unit.KILOMETER_SQUARED,
+    Unit.INCH_SQUARED,
+    Unit.YARD_SQUARED,
+    Unit.FOOT_SQUARED,
     Unit.MILE_SQUARED
-);
+];
 
-export const LENGTH_OVER_LENGTH: number = Unit.METER_OVER_KILOMETER | Unit.INCH_OVER_MILE;
-
-export const ANGLE: number = Unit.DEGREE | Unit.RADIAN;
+export const LENGTH_OVER_LENGTH: Array<string> = [ Unit.METER_OVER_KILOMETER, Unit.INCH_OVER_MILE ];
+export const ANGLE: Array<string> = [ Unit.DEGREE, Unit.RADIAN ];

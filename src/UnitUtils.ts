@@ -7,32 +7,25 @@ import {
     ANGLE
 } from './Unit';
 import { UnitType } from './UnitType';
-import {UnitConverter} from './UnitConverter';
 
 const SUPERSCRIPT_TWO: string = '\u00B2';
 
 export class UnitUtils {
     private constructor() {}
 
-    public static convert(value: number, from: Unit, to: Unit, precision?: number): number {
-        // eslint-disable-next-line no-console
-        console.warn('UnitUtils.convert is deprecated. Use UnitConverter instead.\n', new Error().stack);
-        return UnitConverter.convert(value, from, to);
-    }
-
     public static getUnitType(unit: Unit): UnitType {
         let type: UnitType = null;
 
-        if (!!(unit & AREA)) {
+        if (AREA.indexOf(unit) > -1) {
             type = UnitType.AREA;
         }
-        else if (!!(unit & LINEAR)) {
+        else if (LINEAR.indexOf(unit) > -1) {
             type = UnitType.LINEAR;
         }
-        else if (!!(unit & LENGTH_OVER_LENGTH)) {
+        else if (LENGTH_OVER_LENGTH.indexOf(unit) > -1) {
             type = UnitType.LENGTH_OVER_LENGTH;
         }
-        else if (!!(unit & ANGLE)) {
+        else if (ANGLE.indexOf(unit) > -1) {
             type = UnitType.ANGLE;
         }
         else {
