@@ -1014,6 +1014,30 @@ describe('UnitConverter', () => {
             }
         });
 
+        describe('From Per Meter', () => {
+            it('To Per Foot', () => {
+                expect(UnitConverter.convert(1, Unit.PER_METER, Unit.PER_FOOT)).toBe(0.3048000000012192);
+            });
+        });
+
+        describe('From Per Foot', () => {
+            it('To Per Foot', () => {
+                expect(UnitConverter.convert(1, Unit.PER_FOOT, Unit.PER_METER)).toBe(3.2808398950);
+            });
+        });
+
+        describe('From Per Meter\u00B2', () => {
+            it('To Per Foot\u00B2', () => {
+                expect(UnitConverter.convert(1, Unit.PER_METER_SQUARED, Unit.PER_FOOT_SQUARED)).toBe(0.09290304359661128);
+            });
+        });
+
+        describe('From Per Foot\u00B2', () => {
+            it('To Per Meter\u00B2', () => {
+                expect(UnitConverter.convert(1, Unit.PER_FOOT_SQUARED, Unit.PER_METER_SQUARED)).toBe(10.76391);
+            });
+        });
+
         describe('From Radian', () => {
             it('To Degree', () => {
                 expect(UnitConverter.convert(1, Unit.RADIAN, Unit.DEGREE)).toBe(57.29577951308232);

@@ -78,6 +78,18 @@ export class UnitConverter {
                 case Unit.DEGREE:
                     result = UnitConverter.$fromDegree(value, to);
                     break;
+                case Unit.PER_FOOT_SQUARED:
+                    result = UnitConverter.$fromPerFootSq(value, to);
+                    break;
+                case Unit.PER_METER_SQUARED:
+                    result = UnitConverter.$fromPerMeterSq(value, to);
+                    break;
+                case Unit.PER_FOOT:
+                    result = UnitConverter.$fromPerFoot(value, to);
+                    break;
+                case Unit.PER_METER:
+                    result = UnitConverter.$fromPerMeter(value, to);
+                    break;
                 default: this.$throwNotSupportedFromUnit();
             }
 
@@ -87,6 +99,58 @@ export class UnitConverter {
         }
         else {
             result = value;
+        }
+
+        return result;
+    }
+
+    private static $fromPerFoot(value: number, to: Unit): number {
+        let result: number = null;
+
+        switch (to) {
+            case Unit.PER_METER:
+                result = value * 3.2808398950
+                break;
+            default: this.$throwNotSupportedToUnit();
+        }
+
+        return result;
+    }
+
+    private static $fromPerMeter(value: number, to: Unit): number {
+        let result: number = null;
+
+        switch (to) {
+            case Unit.PER_FOOT:
+                result = value / 3.2808398950;
+                break;
+            default: this.$throwNotSupportedToUnit();
+        }
+
+        return result;
+    }
+
+    private static $fromPerFootSq(value: number, to: Unit): number {
+        let result: number = null;
+
+        switch (to) {
+            case Unit.PER_METER_SQUARED:
+                result = value * 10.76391
+                break;
+            default: this.$throwNotSupportedToUnit();
+        }
+
+        return result;
+    }
+
+    private static $fromPerMeterSq(value: number, to: Unit): number {
+        let result: number = null;
+
+        switch (to) {
+            case Unit.PER_FOOT_SQUARED:
+                result = value / 10.76391;
+                break;
+            default: this.$throwNotSupportedToUnit();
         }
 
         return result;

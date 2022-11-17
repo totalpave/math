@@ -29,7 +29,13 @@ export enum Unit {
     INCH_OVER_MILE          = 'in/mi',
 
     DEGREE                  = 'deg',
-    RADIAN                  = 'rad'
+    RADIAN                  = 'rad',
+
+    // Per Unit Conversions
+    PER_METER               = 'x/m',
+    PER_FOOT                = 'x/ft',
+    PER_METER_SQUARED       = 'x/m2',
+    PER_FOOT_SQUARED        = 'x/ft2'
 }
 
 export const LINEAR: Array<string> = [
@@ -57,3 +63,10 @@ export const AREA: Array<string> = [
 
 export const LENGTH_OVER_LENGTH: Array<string> = [ Unit.METER_OVER_KILOMETER, Unit.INCH_OVER_MILE ];
 export const ANGLE: Array<string> = [ Unit.DEGREE, Unit.RADIAN ];
+
+export const PER_UNIT: Array<string> = [
+    Unit.PER_FOOT,
+    Unit.PER_METER,
+    Unit.PER_FOOT_SQUARED,
+    Unit.PER_METER_SQUARED
+];

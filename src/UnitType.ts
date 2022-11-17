@@ -4,5 +4,6 @@ export enum UnitType {
     AREA,
     LENGTH_OVER_LENGTH,
     COUNT,
-    ANGLE
+    ANGLE,
+    PER_UNIT
 }

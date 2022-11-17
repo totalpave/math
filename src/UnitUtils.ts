@@ -4,7 +4,8 @@ import {
     LINEAR,
     AREA,
     LENGTH_OVER_LENGTH,
-    ANGLE
+    ANGLE,
+    PER_UNIT
 } from './Unit';
 import { UnitType } from './UnitType';
 
@@ -27,6 +28,9 @@ export class UnitUtils {
         }
         else if (ANGLE.indexOf(unit) > -1) {
             type = UnitType.ANGLE;
+        }
+        else if (PER_UNIT.indexOf(unit) > -1) {
+            type = UnitType.PER_UNIT;
         }
         else {
             throw new Error('Unknown unit');
@@ -78,6 +82,14 @@ export class UnitUtils {
                 return 'rad';
             case Unit.DEGREE:
                 return '\u00b0';
+            case Unit.PER_FOOT_SQUARED:
+                return '/ ' + UnitUtils.getUnitText(Unit.FOOT_SQUARED);
+            case Unit.PER_METER_SQUARED:
+                return '/ ' + UnitUtils.getUnitText(Unit.METER_SQUARED);
+            case Unit.PER_METER:
+                return '/ ' + UnitUtils.getUnitText(Unit.METER);
+            case Unit.PER_FOOT:
+                return '/ ' + UnitUtils.getUnitText(Unit.FOOT);
             default:
                 return '';
         }
