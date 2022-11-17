@@ -1,4 +1,4 @@
-@totalpave/math - v1.0.5 / [Exports](modules.md)
+@totalpave/math - v2.0.0 / [Exports](modules.md)
 
 # @totalpave/math
 

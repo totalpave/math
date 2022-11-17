@@ -1,4 +1,4 @@
-[@totalpave/math - v1.0.5](../README.md) / [Exports](../modules.md) / Unit
+[@totalpave/math - v2.0.0](../README.md) / [Exports](../modules.md) / Unit
 
 # Enumeration: Unit
 
@@ -25,6 +25,10 @@
 - [MILLIMETER\_SQUARED](Unit.md#millimeter_squared)
 - [NAUTICAL\_MILE](Unit.md#nautical_mile)
 - [NAUTICAL\_MILE\_SQUARED](Unit.md#nautical_mile_squared)
+- [PER\_FOOT](Unit.md#per_foot)
+- [PER\_FOOT\_SQUARED](Unit.md#per_foot_squared)
+- [PER\_METER](Unit.md#per_meter)
+- [PER\_METER\_SQUARED](Unit.md#per_meter_squared)
 - [RADIAN](Unit.md#radian)
 - [YARD](Unit.md#yard)
 - [YARD\_SQUARED](Unit.md#yard_squared)
@@ -33,218 +37,258 @@
 
 ### CENTIMETER
 
-• **CENTIMETER** = ``2``
+• **CENTIMETER** = ``"cm"``
 
 #### Defined in
 
-[Unit.ts:6](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L6)
+[Unit.ts:6](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L6)
 
 ___
 
 ### CENTIMETER\_SQUARED
 
-• **CENTIMETER\_SQUARED** = ``32``
+• **CENTIMETER\_SQUARED** = ``"cm2"``
 
 #### Defined in
 
-[Unit.ts:11](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L11)
+[Unit.ts:11](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L11)
 
 ___
 
 ### DEGREE
 
-• **DEGREE** = ``1048576``
+• **DEGREE** = ``"deg"``
 
 #### Defined in
 
-[Unit.ts:31](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L31)
+[Unit.ts:31](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L31)
 
 ___
 
 ### FOOT
 
-• **FOOT** = ``512``
+• **FOOT** = ``"ft"``
 
 #### Defined in
 
-[Unit.ts:17](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L17)
+[Unit.ts:17](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L17)
 
 ___
 
 ### FOOT\_SQUARED
 
-• **FOOT\_SQUARED** = ``16384``
+• **FOOT\_SQUARED** = ``"ft2"``
 
 #### Defined in
 
-[Unit.ts:23](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L23)
+[Unit.ts:23](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L23)
 
 ___
 
 ### INCH
 
-• **INCH** = ``256``
+• **INCH** = ``"in"``
 
 #### Defined in
 
-[Unit.ts:16](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L16)
+[Unit.ts:16](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L16)
 
 ___
 
 ### INCH\_OVER\_MILE
 
-• **INCH\_OVER\_MILE** = ``524288``
+• **INCH\_OVER\_MILE** = ``"in/mi"``
 
 #### Defined in
 
-[Unit.ts:29](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L29)
+[Unit.ts:29](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L29)
 
 ___
 
 ### INCH\_SQUARED
 
-• **INCH\_SQUARED** = ``8192``
+• **INCH\_SQUARED** = ``"in2"``
 
 #### Defined in
 
-[Unit.ts:22](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L22)
+[Unit.ts:22](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L22)
 
 ___
 
 ### KILOMETER
 
-• **KILOMETER** = ``8``
+• **KILOMETER** = ``"km"``
 
 #### Defined in
 
-[Unit.ts:8](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L8)
+[Unit.ts:8](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L8)
 
 ___
 
 ### KILOMETER\_SQUARED
 
-• **KILOMETER\_SQUARED** = ``128``
+• **KILOMETER\_SQUARED** = ``"km2"``
 
 #### Defined in
 
-[Unit.ts:13](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L13)
+[Unit.ts:13](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L13)
 
 ___
 
 ### METER
 
-• **METER** = ``4``
+• **METER** = ``"m"``
 
 #### Defined in
 
-[Unit.ts:7](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L7)
+[Unit.ts:7](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L7)
 
 ___
 
 ### METER\_OVER\_KILOMETER
 
-• **METER\_OVER\_KILOMETER** = ``262144``
+• **METER\_OVER\_KILOMETER** = ``"m/km"``
 
 #### Defined in
 
-[Unit.ts:28](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L28)
+[Unit.ts:28](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L28)
 
 ___
 
 ### METER\_SQUARED
 
-• **METER\_SQUARED** = ``64``
+• **METER\_SQUARED** = ``"m2"``
 
 #### Defined in
 
-[Unit.ts:12](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L12)
+[Unit.ts:12](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L12)
 
 ___
 
 ### MILE
 
-• **MILE** = ``2048``
+• **MILE** = ``"mi"``
 
 #### Defined in
 
-[Unit.ts:19](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L19)
+[Unit.ts:19](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L19)
 
 ___
 
 ### MILE\_SQUARED
 
-• **MILE\_SQUARED** = ``65536``
+• **MILE\_SQUARED** = ``"mi2"``
 
 #### Defined in
 
-[Unit.ts:25](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L25)
+[Unit.ts:25](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L25)
 
 ___
 
 ### MILLIMETER
 
-• **MILLIMETER** = ``1``
+• **MILLIMETER** = ``"mm"``
 
 #### Defined in
 
-[Unit.ts:5](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L5)
+[Unit.ts:5](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L5)
 
 ___
 
 ### MILLIMETER\_SQUARED
 
-• **MILLIMETER\_SQUARED** = ``16``
+• **MILLIMETER\_SQUARED** = ``"mm2"``
 
 #### Defined in
 
-[Unit.ts:10](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L10)
+[Unit.ts:10](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L10)
 
 ___
 
 ### NAUTICAL\_MILE
 
-• **NAUTICAL\_MILE** = ``4096``
+• **NAUTICAL\_MILE** = ``"nmi"``
 
 #### Defined in
 
-[Unit.ts:20](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L20)
+[Unit.ts:20](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L20)
 
 ___
 
 ### NAUTICAL\_MILE\_SQUARED
 
-• **NAUTICAL\_MILE\_SQUARED** = ``131072``
+• **NAUTICAL\_MILE\_SQUARED** = ``"nmi2"``
 
 #### Defined in
 
-[Unit.ts:26](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L26)
+[Unit.ts:26](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L26)
+
+___
+
+### PER\_FOOT
+
+• **PER\_FOOT** = ``"x/ft"``
+
+#### Defined in
+
+[Unit.ts:36](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L36)
+
+___
+
+### PER\_FOOT\_SQUARED
+
+• **PER\_FOOT\_SQUARED** = ``"x/ft2"``
+
+#### Defined in
+
+[Unit.ts:38](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L38)
+
+___
+
+### PER\_METER
+
+• **PER\_METER** = ``"x/m"``
+
+#### Defined in
+
+[Unit.ts:35](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L35)
+
+___
+
+### PER\_METER\_SQUARED
+
+• **PER\_METER\_SQUARED** = ``"x/m2"``
+
+#### Defined in
+
+[Unit.ts:37](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L37)
 
 ___
 
 ### RADIAN
 
-• **RADIAN** = ``2097152``
+• **RADIAN** = ``"rad"``
 
 #### Defined in
 
-[Unit.ts:32](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L32)
+[Unit.ts:32](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L32)
 
 ___
 
 ### YARD
 
-• **YARD** = ``1024``
+• **YARD** = ``"yd"``
 
 #### Defined in
 
-[Unit.ts:18](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L18)
+[Unit.ts:18](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L18)
 
 ___
 
 ### YARD\_SQUARED
 
-• **YARD\_SQUARED** = ``32768``
+• **YARD\_SQUARED** = ``"yd2"``
 
 #### Defined in
 
-[Unit.ts:24](https://github.com/totalpave/math/blob/630ea33/src/Unit.ts#L24)
+[Unit.ts:24](https://github.com/totalpave/math/blob/700d8a3/src/Unit.ts#L24)

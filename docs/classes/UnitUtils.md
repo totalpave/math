@@ -1,4 +1,4 @@
-[@totalpave/math - v1.0.5](../README.md) / [Exports](../modules.md) / UnitUtils
+[@totalpave/math - v2.0.0](../README.md) / [Exports](../modules.md) / UnitUtils
 
 # Class: UnitUtils
 
@@ -6,35 +6,11 @@
 
 ### Methods
 
-- [convert](UnitUtils.md#convert)
 - [getUnitList](UnitUtils.md#getunitlist)
 - [getUnitText](UnitUtils.md#getunittext)
 - [getUnitType](UnitUtils.md#getunittype)
 
 ## Methods
-
-### convert
-
-▸ `Static` **convert**(`value`, `from`, `to`, `precision?`): `number`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `value` | `number` |
-| `from` | [`Unit`](../enums/Unit.md) |
-| `to` | [`Unit`](../enums/Unit.md) |
-| `precision?` | `number` |
-
-#### Returns
-
-`number`
-
-#### Defined in
-
-[UnitUtils.ts:17](https://github.com/totalpave/math/blob/630ea33/src/UnitUtils.ts#L17)
-
-___
 
 ### getUnitList
 
@@ -46,7 +22,7 @@ ___
 
 #### Defined in
 
-[UnitUtils.ts:93](https://github.com/totalpave/math/blob/630ea33/src/UnitUtils.ts#L93)
+[UnitUtils.ts:98](https://github.com/totalpave/math/blob/700d8a3/src/UnitUtils.ts#L98)
 
 ___
 
@@ -66,7 +42,7 @@ ___
 
 #### Defined in
 
-[UnitUtils.ts:46](https://github.com/totalpave/math/blob/630ea33/src/UnitUtils.ts#L46)
+[UnitUtils.ts:43](https://github.com/totalpave/math/blob/700d8a3/src/UnitUtils.ts#L43)
 
 ___
 
@@ -86,4 +62,4 @@ ___
 
 #### Defined in
 
-[UnitUtils.ts:23](https://github.com/totalpave/math/blob/630ea33/src/UnitUtils.ts#L23)
+[UnitUtils.ts:17](https://github.com/totalpave/math/blob/700d8a3/src/UnitUtils.ts#L17)
