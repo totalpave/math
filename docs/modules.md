@@ -1,6 +1,6 @@
-[@totalpave/math - v2.0.0](README.md) / Exports
+[@totalpave/math - v2.0.1](README.md) / Exports
 
-# @totalpave/math - v2.0.0
+# @totalpave/math - v2.0.1
 
 ## Table of contents
 
@@ -37,4 +37,4 @@ Renames and re-exports [Math](modules.md#math)
 
 #### Defined in
 
-[Math.ts:258](https://github.com/totalpave/math/blob/700d8a3/src/Math.ts#L258)
+[Math.ts:258](https://github.com/totalpave/math/blob/d8ed3af/src/Math.ts#L258)
