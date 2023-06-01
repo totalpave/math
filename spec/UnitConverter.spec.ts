@@ -5,6 +5,15 @@ import {UnitUtils} from '../src/UnitUtils';
 import Math from '../src/Math';
 
 describe('UnitConverter', () => {
+    describe('precision', () => {
+        it('should round when unit was not converted', () => {
+            expect(UnitConverter.convert(1.25, Unit.MILE, Unit.MILE, 1)).toBe(1.3);
+        });
+
+        it('should round to two decimal places', () => {
+            expect(UnitConverter.convert(1, Unit.MILE, Unit.METER, 2)).toBe(1609.34);
+        });
+    });
     describe('convert', () => {
         describe('From Millimeter', () => {
             it('To Millimeter', () => {
