@@ -92,13 +92,13 @@ export class UnitConverter {
                     break;
                 default: this.$throwNotSupportedFromUnit();
             }
-
-            if (precision !== undefined && precision !== null) {
-                result = Math.round(result, precision);
-            }
         }
         else {
             result = value;
+        }
+
+        if (precision !== undefined && precision !== null) {
+            result = Math.round(result, precision);
         }
 
         return result;
