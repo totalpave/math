@@ -55,11 +55,11 @@ class TPMath implements Math {
         return native.log(x);
     }
     
-    public max(...values: Array<number>): number {
+    public max(...values: number[]): number {
         return native.max(...values);
     }
     
-    public min(...values: Array<number>): number {
+    public min(...values: number[]): number {
         return native.min(...values);
     }
     
@@ -205,7 +205,7 @@ class TPMath implements Math {
      *     If any argument is NaN, the result is NaN.
      *     If all arguments are either +0 or −0, the result is +0.
      */
-    public hypot(...values: Array<number>): number {
+    public hypot(...values: number[]): number {
         return native.hypot(...values);
     }
 
@@ -238,7 +238,7 @@ class TPMath implements Math {
      * Returns a sample standard deviation
      * @param data 
      */
-    public sd(data: Array<number>, population?: boolean): number {
+    public sd(data: number[], population?: boolean): number {
         let n: number = data.length;
         let sum: number = data.reduce((p: number, c: number) => {
             return p + c;

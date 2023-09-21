@@ -38,7 +38,7 @@ export enum Unit {
     PER_FOOT_SQUARED        = 'x/ft2'
 }
 
-export const LINEAR: Array<string> = [
+export const LINEAR: string[] = [
     Unit.MILLIMETER,
     Unit.CENTIMETER,
     Unit.METER,
@@ -50,7 +50,7 @@ export const LINEAR: Array<string> = [
     Unit.NAUTICAL_MILE
 ];
 
-export const AREA: Array<string> = [
+export const AREA: string[] = [
     Unit.METER_SQUARED,
     Unit.MILLIMETER_SQUARED,
     Unit.CENTIMETER_SQUARED,
@@ -61,10 +61,10 @@ export const AREA: Array<string> = [
     Unit.MILE_SQUARED
 ];
 
-export const LENGTH_OVER_LENGTH: Array<string> = [ Unit.METER_OVER_KILOMETER, Unit.INCH_OVER_MILE ];
-export const ANGLE: Array<string> = [ Unit.DEGREE, Unit.RADIAN ];
+export const LENGTH_OVER_LENGTH: string[] = [ Unit.METER_OVER_KILOMETER, Unit.INCH_OVER_MILE ];
+export const ANGLE: string[] = [ Unit.DEGREE, Unit.RADIAN ];
 
-export const PER_UNIT: Array<string> = [
+export const PER_UNIT: string[] = [
     Unit.PER_FOOT,
     Unit.PER_METER,
     Unit.PER_FOOT_SQUARED,

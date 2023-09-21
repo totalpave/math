@@ -52,11 +52,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.MILLIMETER, Unit.NAUTICAL_MILE)).toBe(5.3995680345572e-7);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -104,11 +104,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.CENTIMETER, Unit.NAUTICAL_MILE)).toBe(5.3995680345572e-6);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
                 
-                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -156,11 +156,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.METER, Unit.NAUTICAL_MILE)).toBe(0.0005399568034557236);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -208,11 +208,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.KILOMETER, Unit.NAUTICAL_MILE)).toBe(0.5399568034);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -260,11 +260,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.MILLIMETER_SQUARED, Unit.NAUTICAL_MILE_SQUARED)).toBe(2.91181e-13);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -312,11 +312,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.CENTIMETER_SQUARED, Unit.NAUTICAL_MILE_SQUARED)).toBe(2.91181e-11);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -364,11 +364,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.METER_SQUARED, Unit.NAUTICAL_MILE_SQUARED)).toBe(2.91181e-7);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -416,11 +416,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.KILOMETER_SQUARED, Unit.NAUTICAL_MILE_SQUARED)).toBe(0.291181);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -468,11 +468,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.INCH, Unit.NAUTICAL_MILE)).toBe(1.3714902807775e-5);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -520,11 +520,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.FOOT, Unit.NAUTICAL_MILE)).toBe(0.0001645788);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -572,11 +572,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.YARD, Unit.NAUTICAL_MILE)).toBe(0.0004937365);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -624,11 +624,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.MILE, Unit.NAUTICAL_MILE)).toBe(0.8689762419);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -676,11 +676,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.NAUTICAL_MILE, Unit.NAUTICAL_MILE)).toBe(1);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = AREA.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -728,11 +728,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.INCH_SQUARED, Unit.NAUTICAL_MILE_SQUARED)).toBe(1.8785833396075e-10);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -780,11 +780,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.FOOT_SQUARED, Unit.NAUTICAL_MILE_SQUARED)).toBe(2.7051601137505e-8);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -832,11 +832,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.YARD_SQUARED, Unit.NAUTICAL_MILE_SQUARED)).toBe(2.4346237458194e-7);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -884,11 +884,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.MILE_SQUARED, Unit.NAUTICAL_MILE_SQUARED)).toBe(0.75415532795574);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -936,11 +936,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.NAUTICAL_MILE_SQUARED, Unit.NAUTICAL_MILE_SQUARED)).toBe(1);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
+                let notSupported: string[] = LINEAR.concat(LENGTH_OVER_LENGTH).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -960,11 +960,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.METER_OVER_KILOMETER, Unit.INCH_OVER_MILE)).toBe(63.36005);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = AREA.concat(LINEAR).concat(ANGLE);
+                let notSupported: string[] = AREA.concat(LINEAR).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -984,11 +984,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.INCH_OVER_MILE, Unit.INCH_OVER_MILE)).toBe(1);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = AREA.concat(LINEAR).concat(ANGLE);
+                let notSupported: string[] = AREA.concat(LINEAR).concat(ANGLE);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -1008,11 +1008,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.DEGREE, Unit.RADIAN)).toBe(0.017453292519943295);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = AREA.concat(LINEAR).concat(LENGTH_OVER_LENGTH);
+                let notSupported: string[] = AREA.concat(LINEAR).concat(LENGTH_OVER_LENGTH);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -1092,11 +1092,11 @@ describe('UnitConverter', () => {
                 expect(UnitConverter.convert(1, Unit.RADIAN, Unit.NAUTICAL_MILE)).toBe(3440.069546436285);
             });
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
             for (let i: number = 0; i < unitList.length; i++) {
                 let unit: Unit = unitList[i];
 
-                let notSupported: Array<string> = AREA.concat(LENGTH_OVER_LENGTH);
+                let notSupported: string[] = AREA.concat(LENGTH_OVER_LENGTH);
                 if (notSupported.indexOf(unit) > -1) {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
@@ -1110,9 +1110,9 @@ describe('UnitConverter', () => {
         describe('Conversion should be consistent', () => {
             const THRESHOLD = 1.0e-4;
 
-            let unitList: Array<Unit> = UnitUtils.getUnitList();
+            let unitList: Unit[] = UnitUtils.getUnitList();
 
-            let valueTest: Array<number> = [
+            let valueTest: number[] = [
                 0,
                 1,
                 5,

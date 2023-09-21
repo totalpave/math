@@ -95,8 +95,8 @@ export class UnitUtils {
         }
     }
 
-    public static getUnitList(): Array<Unit> {
-        let list: Array<Unit> = [];
+    public static getUnitList(): Unit[] {
+        let list: Unit[] = [];
 
         for (let i in Unit) {
             list.push((<any>Unit)[i]);
