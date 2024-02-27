@@ -1,6 +1,9 @@
 
 let native: Math = Math;
 
+/**
+ * @since 2.2.0
+ */
 export interface IRatioInput {
     num1: number;
     num2: number;
@@ -259,20 +262,24 @@ class TPMath implements Math {
         // return s / Math.sqrt(n);
     }
 
-    /*
-        Calcultes the mission value in the right side of a ratio equation.
-
-        For example, if X is the missing value this function will solve either:
-
-        1. A : B = C : X
-        2. A : B = X : D
-
-        Arguments:
-        - ratio     Object Literal      Should have properties num1 and num2 to create a ratio of num1 : num2
-        - value     Object Literal      Should have properties num1 OR num2. This object must only possess 1 property.
-
-        Finds value.num1 or value.num2 and returns the value. 
-        The value to found is determined by which property is missing. If num2 is not supplied, num2 will be found.
+    /**
+     * Calcultes the mission value in the right side of a ratio equation.
+     * 
+     * For example, if X is the missing value this function will solve either:
+     * 
+     * 1. A : B = C : X
+     * 2. A : B = X : D
+     * 
+     * Arguments:
+     *  - ratio     Object Literal      Should have properties num1 and num2 to create a ratio of num1 : num2
+     *  - value     Object Literal      Should have properties num1 OR num2. This object must only possess 1 property.
+     * 
+     * 
+     * Finds value.num1 or value.num2 and returns the value. 
+     * 
+     * The value to found is determined by which property is missing. If num2 is not supplied, num2 will be found.
+     * 
+     * @since 2.2.0
     */
     public calculateRatio(ratio: IRatioInput, value: Partial<IRatioInput>): number {
         let a: number = ratio.num1;
