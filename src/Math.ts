@@ -1,6 +1,11 @@
 
 let native: Math = Math;
 
+export interface IRatioInput {
+    num1: number;
+    num2: number;
+}
+
 class TPMath implements Math {
     public E: number                = native.E;
     public LN10: number             = native.LN10;
@@ -252,6 +257,38 @@ class TPMath implements Math {
         return Math.sqrt(variance);
         // let s: number = Math.sqrt(variance);
         // return s / Math.sqrt(n);
+    }
+
+    /*
+        Calcultes the mission value in the right side of a ratio equation.
+
+        For example, if X is the missing value this function will solve either:
+
+        1. A : B = C : X
+        2. A : B = X : D
+
+        Arguments:
+        - ratio     Object Literal      Should have properties num1 and num2 to create a ratio of num1 : num2
+        - value     Object Literal      Should have properties num1 OR num2. This object must only possess 1 property.
+
+        Finds value.num1 or value.num2 and returns the value. 
+        The value to found is determined by which property is missing. If num2 is not supplied, num2 will be found.
+    */
+    public calculateRatio(ratio: IRatioInput, value: Partial<IRatioInput>): number {
+        let a: number = ratio.num1;
+        let b: number = ratio.num2;
+        let c: number | undefined | null = value.num1;
+        let d: number | undefined | null = value.num2;
+
+        if (c) {
+            return c * (b / a);
+        }
+        else if (d) {
+            return d * (a / b);
+        }
+        else {
+            throw new Error("MathUtils.calculateRatio could not determine missing value. value should only contain 1 property named either num1 or num2.");
+        }
     }
 }
 
