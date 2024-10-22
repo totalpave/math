@@ -1,7 +1,7 @@
 
 import {Math as TPMath} from '../src/Math';
 
-function testFloorDataList(data: any[]) {
+function testFloorDataList(data: any[]): void {
     for (let i = 0, length = data.length; i < length; ++i) {
         it(`value ${data[i].value}, precision ${data[i].precision}`, () => {
             expect(TPMath.floor(data[i].value, data[i].precision)).toBe(data[i].result);
@@ -9,7 +9,7 @@ function testFloorDataList(data: any[]) {
     }
 }
 
-function testRoundDataList(data: any[]) {
+function testRoundDataList(data: any[]): void {
     for (let i = 0, length = data.length; i < length; ++i) {
         it(`value ${data[i].value}, precision ${data[i].precision}`, () => {
             expect(TPMath.round(data[i].value, data[i].precision)).toBe(data[i].result);

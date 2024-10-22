@@ -58,7 +58,8 @@ export const AREA: string[] = [
     Unit.INCH_SQUARED,
     Unit.YARD_SQUARED,
     Unit.FOOT_SQUARED,
-    Unit.MILE_SQUARED
+    Unit.MILE_SQUARED,
+    Unit.NAUTICAL_MILE_SQUARED
 ];
 
 export const LENGTH_OVER_LENGTH: string[] = [ Unit.METER_OVER_KILOMETER, Unit.INCH_OVER_MILE ];

@@ -96,12 +96,12 @@ export class UnitUtils {
     }
 
     public static getUnitList(): Unit[] {
-        let list: Unit[] = [];
-
-        for (let i in Unit) {
-            list.push((<any>Unit)[i]);
-        }
-
-        return list;
+        return Array.prototype.concat(
+            LINEAR,
+            AREA,
+            LENGTH_OVER_LENGTH,
+            ANGLE,
+            PER_UNIT
+        );
     }
 }
