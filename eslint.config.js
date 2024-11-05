@@ -9,9 +9,6 @@ module.exports = [
                 "project": "./tsconfig-tests.json",
                 "tsconfigRootDir": __dirname
             }
-        },
-        rules: {
-            "no-console": "error",
         }
     }
 ]
