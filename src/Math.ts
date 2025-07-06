@@ -297,6 +297,10 @@ class TPMath implements Math {
             throw new Error("MathUtils.calculateRatio could not determine missing value. value should only contain 1 property named either num1 or num2.");
         }
     }
+
+    public f16round(x: number): number {
+        return Math.f16round(x);
+    }
 }
 
 let math: TPMath = new TPMath();

@@ -557,6 +557,10 @@ describe('Math', () => {
         it('cbrt', () => {
             expect(TPMath.cbrt(123)).toBe(Math.cbrt(123));
         });
+
+        (Math.f16round ? it : xit)('f16round', () => {
+            expect(TPMath.f16round(1.12345)).toBe(Math.f16round(1.12345));
+        });
     });
 
     describe('standard deviation', () => {

@@ -61,7 +61,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.MILLIMETER, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -113,7 +113,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.CENTIMETER, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -165,7 +165,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.METER, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -217,7 +217,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.KILOMETER, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -269,7 +269,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.MILLIMETER_SQUARED, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -321,7 +321,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.CENTIMETER_SQUARED, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -373,7 +373,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.METER_SQUARED, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -425,7 +425,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.KILOMETER_SQUARED, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -477,7 +477,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.INCH, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -529,7 +529,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.FOOT, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -581,7 +581,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.YARD, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -633,7 +633,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.MILE, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -685,7 +685,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.NAUTICAL_MILE, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -737,7 +737,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.INCH_SQUARED, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -789,7 +789,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.FOOT_SQUARED, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -841,7 +841,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.YARD_SQUARED, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -893,7 +893,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.MILE_SQUARED, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -945,7 +945,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.NAUTICAL_MILE_SQUARED, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -969,7 +969,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.METER_OVER_KILOMETER, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -993,7 +993,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.INCH_OVER_MILE, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -1017,7 +1017,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.DEGREE, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
@@ -1101,7 +1101,7 @@ describe('UnitConverter', () => {
                     it('Not Supported: ' + UnitUtils.getUnitText(unit), () => {
                         expect(() => {
                             UnitConverter.convert(1, Unit.RADIAN, unit);
-                        }).toThrowError(/Not supported "To" unit./);
+                        }).toThrow(/Not supported "To" unit./);
                     });
                 }
             }
