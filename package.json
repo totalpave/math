@@ -1,6 +1,6 @@
 {
   "name": "@totalpave/math",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "Math library",
   "main": "lib/api.js",
   "types": "lib/api.d.ts",
