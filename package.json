@@ -31,16 +31,16 @@
   },
   "homepage": "https://github.com/totalpave/math#readme",
   "devDependencies": {
-    "@jest/types": "30.0.1",
-    "@totalpave/eslint-plugin": "7.0.12",
+    "@jest/types": "30.0.5",
+    "@totalpave/eslint-plugin": "7.0.15",
     "@types/jest": "30.0.0",
-    "@types/node": "24.0.13",
+    "@types/node": "24.1.0",
     "auto-changelog": "2.5.0",
-    "jest": "30.0.4",
+    "jest": "30.0.5",
     "ts-jest": "29.4.0",
     "ts-node": "10.9.2",
-    "typedoc": "0.28.7",
-    "typedoc-plugin-markdown": "4.7.0",
+    "typedoc": "0.28.9",
+    "typedoc-plugin-markdown": "4.8.0",
     "typescript": "5.8.3"
   },
   "dependencies": {
